@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>L'RAY Treat — Cakes, Desserts & Café</title>
+<meta name="description" content="L'RAY Treat — handcrafted cakes, desserts and café favourites. A sweet stop loved by 1,200+ happy guests." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8f3;--ink:#3a1e2a;--muted:#7a5867;--accent:#d96b8a;--accent-dark:#a8456a;--card:#fff;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:700;letter-spacing:-.3px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;background:rgba(255,248,243,.95);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--accent-dark)}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.cta{background:var(--accent);color:#fff!important;padding:10px 22px;border-radius:30px;font-size:14px;font-weight:500}
+
+.hero{min-height:88vh;display:flex;align-items:center;background:linear-gradient(rgba(58,30,42,.45),rgba(58,30,42,.55)),url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1600&q=80') center/cover;color:#fff;text-align:center}
+.hero-content{max-width:780px;margin:0 auto;padding:60px 24px}
+.hero h1{font-size:clamp(40px,7vw,76px);line-height:1.05;margin-bottom:20px}
+.hero p{font-size:clamp(16px,2vw,20px);opacity:.95;margin-bottom:32px;font-weight:300}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:30px;font-weight:500;transition:transform .2s,background .2s;margin:6px}
+.btn:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;border:2px solid #fff}
+
+section{padding:90px 0}
+.section-title{text-align:center;margin-bottom:60px}
+.section-title h2{font-size:clamp(32px,5vw,52px);margin-bottom:12px}
+.section-title p{color:var(--muted);font-size:17px}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-grid img{width:100%;border-radius:14px;box-shadow:0 20px 40px rgba(217,107,138,.18)}
+.about-text h2{font-size:42px;margin-bottom:20px}
+.about-text p{color:var(--muted);margin-bottom:16px}
+
+.menu{background:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.menu-card{background:var(--bg);border-radius:14px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(217,107,138,.15)}
+.menu-card img{width:100%;height:220px;object-fit:cover}
+.menu-card-body{padding:22px}
+.menu-card h3{font-size:26px;margin-bottom:8px}
+.menu-card p{color:var(--muted);font-size:14px;margin-bottom:12px}
+.price{color:var(--accent);font-weight:600;font-size:18px}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.gallery-grid img{width:100%;height:240px;object-fit:cover;border-radius:10px;transition:transform .3s}
+.gallery-grid img:hover{transform:scale(1.03)}
+
+.contact{background:var(--ink);color:#fff}
+.contact .section-title h2{color:#fff}
+.contact .section-title p{color:#d5b8c4}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;text-align:center}
+.contact-card{padding:30px;background:rgba(255,255,255,.07);border-radius:14px}
+.contact-card .icon{font-size:34px;margin-bottom:14px}
+.contact-card h3{font-size:20px;margin-bottom:8px;color:#fff;font-family:'Poppins',sans-serif;font-weight:600}
+.contact-card p,.contact-card a{color:#d5b8c4;font-size:15px}
+.contact-card a:hover{color:var(--accent)}
+
+footer{background:#28141d;color:#9a7c89;padding:30px 0;text-align:center;font-size:14px}
+
+@media(max-width:768px){
+.nav-links{display:none}
+.about-grid{grid-template-columns:1fr}
+section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">L'RAY Treat</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Visit</a>
+      </div>
+      <a href="tel:+918910363559" class="cta">Order Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Sweet Moments,<br>Beautifully Made.</h1>
+    <p>Handcrafted cakes, desserts and café favourites — every treat baked with love, every bite worth remembering.</p>
+    <a href="#menu" class="btn">See the Menu</a>
+    <a href="#contact" class="btn btn-outline">Find Us</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=900&q=80" alt="Inside L'RAY Treat">
+      <div class="about-text">
+        <h2>Loved by 1,200+ Guests</h2>
+        <p>L'RAY Treat is a cosy little café and dessert studio where every cake is iced by hand, every pastry baked the same morning it's served, and every guest is treated like family.</p>
+        <p>From custom celebration cakes to a quick coffee-and-cupcake run — we're the sweet stop your day deserves.</p>
+        <p style="color:var(--accent);font-weight:600;margin-top:24px;">★ 4.7 · 1,200+ Google Reviews</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Treats</h2>
+      <p>Fresh out of the oven, every single day</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80" alt="Custom Cakes">
+        <div class="menu-card-body">
+          <h3>Custom Cakes</h3>
+          <p>Birthday, anniversary, wedding — designed and baked to order.</p>
+          <span class="price">From ₹650</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80" alt="Pastries">
+        <div class="menu-card-body">
+          <h3>Pastries &amp; Cupcakes</h3>
+          <p>Black forest, red velvet, chocolate truffle, salted caramel and more.</p>
+          <span class="price">From ₹85</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="Desserts">
+        <div class="menu-card-body">
+          <h3>Plated Desserts</h3>
+          <p>Brownies, cheesecakes, jar desserts and our signature L'RAY special.</p>
+          <span class="price">From ₹120</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80" alt="Beverages">
+        <div class="menu-card-body">
+          <h3>Cafe &amp; Beverages</h3>
+          <p>Hot chocolate, coffees, shakes, mocktails — the perfect treat pairing.</p>
+          <span class="price">From ₹110</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>From Our Counter</h2>
+      <p>A little taste of everything sweet</p>
+    </div>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1464195244916-405fa0a82545?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=80" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Come Say Hi</h2>
+      <p>Walk in, call ahead, or order a cake for tomorrow</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h3>Call / WhatsApp</h3>
+        <p><a href="tel:+918910363559">+91 89103 63559</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h3>Find Us</h3>
+        <p><a href="https://www.google.com/maps/place/L'RAY+Treat" target="_blank">View on Google Maps</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">🕒</div>
+        <h3>Open Daily</h3>
+        <p>11:00 AM — 10:30 PM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© L'RAY Treat · Made with love, served with a smile</div>
+</footer>
+
+</body>
+</html>

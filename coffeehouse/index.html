@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coffee House, New Town — A Kolkata Tradition</title>
+<meta name="description" content="Coffee House, New Town — the legendary Kolkata coffee tradition continues. Iconic infusion, classic snacks and warm adda since forever." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f0e6;--ink:#1f2218;--muted:#5e6155;--accent:#3d6b3a;--accent-dark:#264a25;--card:#fff;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Lora',serif;font-weight:700;letter-spacing:-.3px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+header{position:sticky;top:0;background:rgba(245,240,230,.95);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(0,0,0,.08)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:'Lora',serif;font-size:26px;font-weight:700;color:var(--accent-dark);line-height:1.1}
+.logo small{display:block;font-size:11px;font-weight:400;color:var(--muted);font-family:'Source Sans 3',sans-serif;letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.cta{background:var(--accent);color:#fff!important;padding:10px 20px;border-radius:4px;font-size:14px;font-weight:500}
+
+.hero{min-height:88vh;display:flex;align-items:center;background:linear-gradient(rgba(31,34,24,.6),rgba(31,34,24,.7)),url('https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=1600&q=80') center/cover;color:#fff;text-align:center}
+.hero-content{max-width:820px;margin:0 auto;padding:60px 24px}
+.hero .tagline{display:inline-block;border:1px solid rgba(255,255,255,.4);padding:6px 16px;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{font-size:clamp(38px,6.5vw,72px);line-height:1.1;margin-bottom:20px}
+.hero p{font-size:clamp(16px,2vw,20px);opacity:.92;margin-bottom:32px;font-weight:300}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:4px;font-weight:500;transition:transform .2s,background .2s;margin:6px;font-size:15px}
+.btn:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;border:2px solid #fff}
+
+section{padding:90px 0}
+.section-title{text-align:center;margin-bottom:60px}
+.section-title h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:12px}
+.section-title p{color:var(--muted);font-size:17px}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-grid img{width:100%;border-radius:6px;box-shadow:0 20px 40px rgba(0,0,0,.12)}
+.about-text h2{font-size:38px;margin-bottom:20px}
+.about-text p{color:var(--muted);margin-bottom:16px}
+.stat-row{display:flex;gap:30px;margin-top:30px}
+.stat{text-align:center}
+.stat .num{font-family:'Lora',serif;font-size:32px;color:var(--accent);font-weight:700}
+.stat .lbl{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+.menu{background:#fff}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.menu-card{background:var(--bg);border-radius:6px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid rgba(0,0,0,.04)}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
+.menu-card img{width:100%;height:220px;object-fit:cover}
+.menu-card-body{padding:22px}
+.menu-card h3{font-size:22px;margin-bottom:8px}
+.menu-card p{color:var(--muted);font-size:14px;margin-bottom:12px}
+.price{color:var(--accent);font-weight:600;font-size:18px}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gallery-grid img{width:100%;height:240px;object-fit:cover;border-radius:4px;transition:transform .3s}
+.gallery-grid img:hover{transform:scale(1.03)}
+
+.contact{background:var(--ink);color:#fff}
+.contact .section-title h2{color:#fff}
+.contact .section-title p{color:#b5b7ad}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;text-align:center}
+.contact-card{padding:30px;background:rgba(255,255,255,.05);border-radius:6px}
+.contact-card .icon{font-size:34px;margin-bottom:14px}
+.contact-card h3{font-size:18px;margin-bottom:8px;color:#fff;font-family:'Source Sans 3',sans-serif;font-weight:600}
+.contact-card p,.contact-card a{color:#b5b7ad;font-size:15px}
+.contact-card a:hover{color:#7fb37a}
+
+footer{background:#13160e;color:#7a7d72;padding:30px 0;text-align:center;font-size:14px}
+
+@media(max-width:768px){
+.nav-links{display:none}
+.about-grid{grid-template-columns:1fr}
+section{padding:60px 0}
+.stat-row{justify-content:center;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Coffee House<small>New Town</small></div>
+      <div class="nav-links">
+        <a href="#about">Heritage</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Visit</a>
+      </div>
+      <a href="tel:+919831093630" class="cta">Call Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="tagline">A Kolkata Tradition</span>
+    <h1>Coffee. Adda.<br>And Everything In Between.</h1>
+    <p>The legendary Coffee House experience — now in New Town. Iconic infusion, classic snacks, and conversations that last for hours.</p>
+    <a href="#menu" class="btn">View Menu</a>
+    <a href="#contact" class="btn btn-outline">Visit Us</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80" alt="Inside Coffee House">
+      <div class="about-text">
+        <h2>Where Stories Are Brewed</h2>
+        <p>Coffee House is more than a café — it's an institution. A place where students debate, writers find their next line, friends reunite over endless cups of coffee, and time slows down just a little.</p>
+        <p>Our New Town outlet brings that same spirit to one of Kolkata's newest neighbourhoods — high ceilings, easy chairs, strong coffee and the warm hum of conversation.</p>
+        <div class="stat-row">
+          <div class="stat"><div class="num">4.0★</div><div class="lbl">Google Rating</div></div>
+          <div class="stat"><div class="num">11.4K+</div><div class="lbl">Reviews</div></div>
+          <div class="stat"><div class="num">7 Days</div><div class="lbl">A Week</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="menu">
+  <div class="container">
+    <div class="section-title">
+      <h2>The Menu</h2>
+      <p>Classics that never go out of style</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?w=600&q=80" alt="Infusion">
+        <div class="menu-card-body">
+          <h3>The Famous Infusion</h3>
+          <p>Hot and cold coffees brewed the Coffee House way. Strong, smooth, unforgettable.</p>
+          <span class="price">From ₹60</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1525184782-1ddb4a8a3c4d?w=600&q=80" alt="Snacks">
+        <div class="menu-card-body">
+          <h3>Snacks &amp; Pakoras</h3>
+          <p>Fish fry, mutton kobiraji, chicken pakora, kabiraji cutlet — Kolkata classics.</p>
+          <span class="price">From ₹120</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&q=80" alt="Continental">
+        <div class="menu-card-body">
+          <h3>Mains &amp; Continental</h3>
+          <p>Chicken sandwich, omelettes, mughlai paratha and full plate meals.</p>
+          <span class="price">From ₹180</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Desserts">
+        <div class="menu-card-body">
+          <h3>Sweet Endings</h3>
+          <p>Caramel custard, ice cream and chocolate desserts to finish the adda.</p>
+          <span class="price">From ₹90</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>A Glimpse Inside</h2>
+      <p>The room, the people, the coffee</p>
+    </div>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1525629374365-d1ff14c8df04?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="">
+      <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=600&q=80" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Come Find Us</h2>
+      <p>In the heart of New Town</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h3>Call</h3>
+        <p><a href="tel:+919831093630">+91 98310 93630</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h3>Location</h3>
+        <p><a href="https://www.google.com/maps/place/Coffee+House,+New+Town" target="_blank">View on Google Maps</a></p>
+      </div>
+      <div class="contact-card">
+        <div class="icon">🕒</div>
+        <h3>Hours</h3>
+        <p>9:00 AM — 10:00 PM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© Coffee House, New Town · A Kolkata tradition</div>
+</footer>
+
+</body>
+</html>

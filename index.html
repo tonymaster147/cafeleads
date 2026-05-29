@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cafe Demos — Website Samples</title>
+<meta name="description" content="Dummy single-page website demos built for cafe leads." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#0f0f12;color:#fff;min-height:100vh;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:80px 24px}
+header{text-align:center;margin-bottom:60px}
+header h1{font-size:clamp(32px,5vw,52px);font-weight:700;margin-bottom:14px;letter-spacing:-1px}
+header p{color:#a0a0aa;font-size:18px;max-width:600px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:#1a1a20;border-radius:16px;overflow:hidden;border:1px solid #26262e;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:#444}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-body{padding:24px}
+.card h3{font-size:22px;font-weight:600;margin-bottom:6px}
+.card .meta{color:#a0a0aa;font-size:14px;margin-bottom:16px}
+.card a{display:inline-block;background:#fff;color:#0f0f12;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:500;font-size:14px;transition:opacity .2s}
+.card a:hover{opacity:.85}
+footer{text-align:center;margin-top:80px;color:#666;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Cafe Website Demos</h1>
+    <p>Single-page website samples built for three Kolkata cafes. Mobile-responsive, fast-loading, ready to customize.</p>
+  </header>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="">
+      <div class="card-body">
+        <h3>Amari Cafe</h3>
+        <div class="meta">Specialty Coffee · Bakery · 4.7 ★</div>
+        <a href="./amari/">View Demo →</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="">
+      <div class="card-body">
+        <h3>L'RAY Treat</h3>
+        <div class="meta">Cakes &amp; Desserts · 4.7 ★</div>
+        <a href="./lray/">View Demo →</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=600&q=80" alt="">
+      <div class="card-body">
+        <h3>Coffee House, New Town</h3>
+        <div class="meta">Kolkata Classic · 4.0 ★</div>
+        <a href="./coffeehouse/">View Demo →</a>
+      </div>
+    </div>
+  </div>
+  <footer>Dummy demo sites · Built for outreach</footer>
+</div>
+</body>
+</html>
