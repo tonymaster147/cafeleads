@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cafe Demos — Website Samples</title>
-<meta name="description" content="Dummy single-page website demos built for cafe leads." />
+<meta name="description" content="Single-page website demos built for three Kolkata cafes." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -16,7 +16,7 @@ header p{color:#a0a0aa;font-size:18px;max-width:600px;margin:0 auto}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .card{background:#1a1a20;border-radius:16px;overflow:hidden;border:1px solid #26262e;transition:transform .25s,border-color .25s}
 .card:hover{transform:translateY(-6px);border-color:#444}
-.card img{width:100%;height:200px;object-fit:cover}
+.card .img{width:100%;height:220px;background-size:cover;background-position:center}
 .card-body{padding:24px}
 .card h3{font-size:22px;font-weight:600;margin-bottom:6px}
 .card .meta{color:#a0a0aa;font-size:14px;margin-bottom:16px}
@@ -33,31 +33,31 @@ footer{text-align:center;margin-top:80px;color:#666;font-size:14px}
   </header>
   <div class="grid">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="">
+      <div class="img" style="background-image:url('./amari/images/unnamed (4).webp')"></div>
       <div class="card-body">
-        <h3>Amari Cafe</h3>
-        <div class="meta">Specialty Coffee · Bakery · 4.7 ★</div>
+        <h3>Amari</h3>
+        <div class="meta">Specialty Coffee · Bakery · All Day Diner · 4.7 ★</div>
         <a href="./amari/">View Demo →</a>
       </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="">
+      <div class="img" style="background-image:url('./lray/images/unnamed (7).webp')"></div>
       <div class="card-body">
         <h3>L'RAY Treat</h3>
-        <div class="meta">Cakes &amp; Desserts · 4.7 ★</div>
+        <div class="meta">Baker's Café · Satyajit Ray Tribute · 4.7 ★</div>
         <a href="./lray/">View Demo →</a>
       </div>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=600&q=80" alt="">
+      <div class="img" style="background-image:url('./coffeehouse/images/unnamed (8).webp')"></div>
       <div class="card-body">
         <h3>Coffee House, New Town</h3>
-        <div class="meta">Kolkata Classic · 4.0 ★</div>
+        <div class="meta">Multi-Cuisine Restaurant · Rooftop · 4.0 ★</div>
         <a href="./coffeehouse/">View Demo →</a>
       </div>
     </div>
   </div>
-  <footer>Dummy demo sites · Built for outreach</footer>
+  <footer>Demo sites · Built for outreach</footer>
 </div>
 </body>
 </html>

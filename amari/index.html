@@ -3,84 +3,94 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Amari Cafe — Specialty Coffee, Eating House & Artisanal Bakery</title>
-<meta name="description" content="Amari Cafe — specialty coffee, eating house and artisanal bakery. Freshly roasted coffee, handmade bakes and a warm dining experience." />
+<title>Amari · Specialty Coffee · Artisanal Bakery · All Day Diner</title>
+<meta name="description" content="Amari — specialty coffee, artisanal bakery and an all-day diner. Pour-overs, matcha, fresh bakes and a warm dining experience." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbf7f2;--ink:#2b1d14;--muted:#6b5a4e;--accent:#8b5a2b;--accent-dark:#5e3a1a;--card:#ffffff;}
+:root{--bg:#f6efe6;--paper:#ede2d0;--ink:#241712;--muted:#6e574a;--accent:#a04a1f;--accent-dark:#6e2f10;--terra:#c47a4a;--card:#fff;}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.5px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;letter-spacing:-.5px}
 a{color:inherit;text-decoration:none}
 .container{max-width:1180px;margin:0 auto;padding:0 24px}
 
-/* Nav */
-header{position:sticky;top:0;background:rgba(251,247,242,.95);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
+header{position:sticky;top:0;background:rgba(246,239,230,.96);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--accent-dark)}
+.logo{font-family:'Fraunces',serif;font-size:30px;font-weight:900;color:var(--accent-dark);letter-spacing:1px}
 .nav-links{display:flex;gap:32px}
-.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;transition:color .2s}
 .nav-links a:hover{color:var(--accent)}
-.cta{background:var(--accent);color:#fff!important;padding:10px 20px;border-radius:30px;font-size:14px;font-weight:500}
+.cta{background:var(--accent);color:#fff!important;padding:11px 22px;border-radius:30px;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase}
 
-/* Hero */
-.hero{min-height:88vh;display:flex;align-items:center;background:linear-gradient(rgba(43,29,20,.55),rgba(43,29,20,.65)),url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80') center/cover;color:#fff;text-align:center}
-.hero-content{max-width:780px;margin:0 auto;padding:60px 24px}
-.hero h1{font-size:clamp(36px,6vw,68px);line-height:1.1;margin-bottom:20px}
-.hero p{font-size:clamp(16px,2vw,20px);opacity:.9;margin-bottom:32px;font-weight:300}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:30px;font-weight:500;transition:transform .2s,background .2s;margin:6px}
+.hero{min-height:90vh;display:flex;align-items:center;background:linear-gradient(rgba(20,12,8,.55),rgba(20,12,8,.7)),url('./images/unnamed (4).webp') center/cover;color:#f6efe6;text-align:center}
+.hero-content{max-width:840px;margin:0 auto;padding:60px 24px}
+.hero .tagline{display:inline-block;border-top:1px solid rgba(246,239,230,.4);border-bottom:1px solid rgba(246,239,230,.4);padding:8px 22px;font-size:11px;letter-spacing:5px;text-transform:uppercase;margin-bottom:30px;color:#e8c9a8}
+.hero h1{font-size:clamp(44px,7.5vw,84px);line-height:1.02;margin-bottom:24px;font-weight:900}
+.hero p{font-size:clamp(16px,2vw,20px);opacity:.94;margin-bottom:36px;font-weight:300;max-width:560px;margin-left:auto;margin-right:auto}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:30px;font-weight:500;letter-spacing:1px;text-transform:uppercase;font-size:13px;transition:transform .2s,background .2s;margin:6px}
 .btn:hover{background:var(--accent-dark);transform:translateY(-2px)}
-.btn-outline{background:transparent;border:2px solid #fff}
+.btn-outline{background:transparent;border:2px solid #f6efe6}
 
-/* Sections */
-section{padding:90px 0}
+section{padding:100px 0}
 .section-title{text-align:center;margin-bottom:60px}
-.section-title h2{font-size:clamp(28px,4vw,44px);margin-bottom:12px}
-.section-title p{color:var(--muted);font-size:17px}
+.section-title .eyebrow{display:inline-block;color:var(--accent);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;font-weight:600}
+.section-title h2{font-size:clamp(32px,5vw,50px);margin-bottom:12px;line-height:1.1}
+.section-title p{color:var(--muted);font-size:17px;max-width:580px;margin:0 auto}
 
-/* About */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-grid img{width:100%;border-radius:14px;box-shadow:0 20px 40px rgba(0,0,0,.1)}
-.about-text h2{font-size:36px;margin-bottom:20px}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.about-img img{width:100%;border-radius:6px;box-shadow:0 24px 50px rgba(0,0,0,.18)}
+.about-text .eyebrow{display:inline-block;color:var(--accent);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;font-weight:600}
+.about-text h2{font-size:42px;margin-bottom:20px;line-height:1.1}
 .about-text p{color:var(--muted);margin-bottom:16px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;padding-top:30px;border-top:1px solid rgba(0,0,0,.08)}
+.pillar{text-align:center}
+.pillar .num{font-family:'Fraunces',serif;font-size:22px;color:var(--accent);font-weight:700;display:block;margin-bottom:4px}
+.pillar .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px}
 
-/* Menu */
-.menu{background:#fff}
+.menu{background:var(--paper)}
 .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
-.menu-card{background:var(--bg);border-radius:14px;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.menu-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
-.menu-card img{width:100%;height:220px;object-fit:cover}
-.menu-card-body{padding:22px}
-.menu-card h3{font-size:22px;margin-bottom:8px}
-.menu-card p{color:var(--muted);font-size:14px;margin-bottom:12px}
-.price{color:var(--accent);font-weight:600;font-size:18px}
+.menu-card{background:#fff;border-radius:6px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid rgba(0,0,0,.05)}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.12)}
+.menu-card .img-wrap{height:240px;overflow:hidden}
+.menu-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.menu-card:hover img{transform:scale(1.05)}
+.menu-card-body{padding:24px}
+.menu-card h3{font-size:24px;margin-bottom:8px}
+.menu-card p{color:var(--muted);font-size:14px;margin-bottom:14px;line-height:1.55}
+.price{color:var(--accent);font-weight:700;font-size:17px;font-family:'Fraunces',serif}
 
-/* Gallery */
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.gallery-grid img{width:100%;height:240px;object-fit:cover;border-radius:10px;transition:transform .3s}
-.gallery-grid img:hover{transform:scale(1.03)}
+.feature{background:var(--ink);color:#f6efe6;padding:90px 0}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.feature-grid img{width:100%;border-radius:6px}
+.feature-text .eyebrow{color:var(--terra);font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:600;display:inline-block;margin-bottom:14px}
+.feature-text h2{font-size:42px;line-height:1.1;margin-bottom:20px;color:#f6efe6}
+.feature-text p{color:#c9b4a0;margin-bottom:18px}
 
-/* Contact */
-.contact{background:var(--ink);color:#fff}
-.contact .section-title h2{color:#fff}
-.contact .section-title p{color:#bdb1a6}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gallery-grid .item{position:relative;height:260px;border-radius:6px;overflow:hidden}
+.gallery-grid .item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-grid .item:hover img{transform:scale(1.06)}
+
+.contact{background:#1c110a;color:#f6efe6}
+.contact .section-title h2{color:#f6efe6}
+.contact .section-title p,.contact .section-title .eyebrow{color:#e8c9a8}
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;text-align:center}
-.contact-card{padding:30px;background:rgba(255,255,255,.05);border-radius:14px}
-.contact-card .icon{font-size:34px;margin-bottom:14px}
-.contact-card h3{font-size:18px;margin-bottom:8px;color:#fff;font-family:'Inter',sans-serif;font-weight:600}
-.contact-card p,.contact-card a{color:#bdb1a6;font-size:15px}
-.contact-card a:hover{color:var(--accent)}
+.contact-card{padding:36px 24px;background:rgba(255,255,255,.04);border-radius:6px;border:1px solid rgba(232,201,168,.15)}
+.contact-card .icon{font-size:32px;margin-bottom:16px}
+.contact-card h3{font-size:17px;margin-bottom:10px;color:#f6efe6;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.contact-card p,.contact-card a{color:#c9b4a0;font-size:15px}
+.contact-card a:hover{color:var(--terra)}
 
-/* Footer */
-footer{background:#1a110a;color:#8a7b6e;padding:30px 0;text-align:center;font-size:14px}
+footer{background:#120a05;color:#7a6856;padding:30px 0;text-align:center;font-size:13px;letter-spacing:1px}
 
 @media(max-width:768px){
 .nav-links{display:none}
-.about-grid{grid-template-columns:1fr}
-section{padding:60px 0}
+.about-grid,.feature-grid{grid-template-columns:1fr}
+section{padding:70px 0}
+.pillars{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -89,12 +99,12 @@ section{padding:60px 0}
 <header>
   <div class="container">
     <nav>
-      <div class="logo">Amari</div>
+      <div class="logo">AMARI</div>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Visit</a>
       </div>
       <a href="tel:+919903812932" class="cta">Reserve</a>
     </nav>
@@ -103,9 +113,10 @@ section{padding:60px 0}
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Specialty Coffee.<br>Artisanal Bakery.</h1>
-    <p>A warm eating house where freshly roasted beans meet handcrafted bakes — every cup, every crumb, made with care.</p>
-    <a href="#menu" class="btn">Explore Menu</a>
+    <span class="tagline">Specialty Coffee · Artisanal Bakery · All Day Diner</span>
+    <h1>Slow brews.<br>Warm rooms.<br>Honest food.</h1>
+    <p>Pour-over coffee, fresh-baked bread and an all-day menu — made unhurriedly, served warmly.</p>
+    <a href="#menu" class="btn">Explore the Menu</a>
     <a href="#contact" class="btn btn-outline">Visit Us</a>
   </div>
 </section>
@@ -113,12 +124,19 @@ section{padding:60px 0}
 <section id="about">
   <div class="container">
     <div class="about-grid">
-      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=900&q=80" alt="Inside Amari Cafe">
+      <div class="about-img">
+        <img src="./images/unnamed (2).webp" alt="Inside Amari">
+      </div>
       <div class="about-text">
-        <h2>Our Story</h2>
-        <p>Amari was born from a love for slow mornings, well-pulled espresso and the smell of fresh sourdough out of the oven. We are a specialty coffee bar, a full eating house and an artisanal bakery — all under one roof.</p>
-        <p>Every coffee we serve is roasted in small batches. Every loaf, croissant and pastry is shaped by hand. Come for the coffee, stay for the food, leave with a box of bakes.</p>
-        <p style="color:var(--accent);font-weight:600;margin-top:24px;">★ 4.7 · 490+ Google Reviews</p>
+        <span class="eyebrow">Our Story</span>
+        <h2>A coffee bar, a bakery and a dining room — all at once.</h2>
+        <p>Amari is built around three simple things: a serious specialty coffee program, an artisanal bakery turning out bread and bakes daily, and a kitchen that serves real food, all day long.</p>
+        <p>The room is warm — terracotta walls, wooden tables, soft lighting, the hum of a pour-over kettle and the smell of something just out of the oven. Stay as long as you'd like.</p>
+        <div class="pillars">
+          <div class="pillar"><span class="num">★ 4.7</span><span class="lbl">Google Rating</span></div>
+          <div class="pillar"><span class="num">490+</span><span class="lbl">Reviews</span></div>
+          <div class="pillar"><span class="num">All Day</span><span class="lbl">Kitchen</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -127,41 +145,88 @@ section{padding:60px 0}
 <section id="menu" class="menu">
   <div class="container">
     <div class="section-title">
+      <span class="eyebrow">The Menu</span>
       <h2>What We Serve</h2>
-      <p>Specialty brews, all-day plates and bakery favourites</p>
+      <p>Specialty coffee, fresh bakes and full plates — across breakfast, lunch and dinner.</p>
     </div>
     <div class="menu-grid">
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Specialty Coffee">
+        <div class="img-wrap"><img src="./images/unnamed (16).webp" alt="Pour-Over Coffee"></div>
         <div class="menu-card-body">
           <h3>Specialty Coffee</h3>
-          <p>Single-origin pour-overs, flat whites, cortados and our signature Amari latte.</p>
+          <p>Single-origin pour-overs, espresso, flat whites — brewed by people who care.</p>
           <span class="price">From ₹180</span>
         </div>
       </div>
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80" alt="Artisanal Bakery">
+        <div class="img-wrap"><img src="./images/unnamed (15).webp" alt="Matcha Latte"></div>
         <div class="menu-card-body">
-          <h3>Artisanal Bakery</h3>
-          <p>Sourdough loaves, butter croissants, danishes and seasonal tarts — baked fresh daily.</p>
-          <span class="price">From ₹120</span>
+          <h3>Matcha &amp; Tea</h3>
+          <p>Ceremonial matcha lattes, hot chocolates and a curated tea menu.</p>
+          <span class="price">From ₹200</span>
         </div>
       </div>
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="All-Day Plates">
+        <div class="img-wrap"><img src="./images/unnamed (8).webp" alt="Signature Cold Coffee"></div>
         <div class="menu-card-body">
-          <h3>All-Day Plates</h3>
-          <p>Eggs your way, smashed avo toast, grain bowls, pastas and house specials.</p>
-          <span class="price">From ₹320</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Desserts">
-        <div class="menu-card-body">
-          <h3>Desserts &amp; Cakes</h3>
-          <p>Whole cakes, slices and patisserie made in our in-house bakery.</p>
+          <h3>Cold Coffees &amp; Coolers</h3>
+          <p>House cold brews, signature mocha and our chocolate-streaked iced lattes.</p>
           <span class="price">From ₹220</span>
         </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (3).webp" alt="Garlic Bread Bowl"></div>
+        <div class="menu-card-body">
+          <h3>Artisanal Bakery</h3>
+          <p>Fresh-baked bread bowls, sourdough, viennoiserie — baked in-house every morning.</p>
+          <span class="price">From ₹160</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (1).webp" alt="Bakery Toast"></div>
+        <div class="menu-card-body">
+          <h3>Breakfast &amp; Toasts</h3>
+          <p>Open-faced sourdough toasts with seasonal toppings — labneh, jam, fresh fruit.</p>
+          <span class="price">From ₹280</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (13).webp" alt="All Day Plates"></div>
+        <div class="menu-card-body">
+          <h3>All-Day Plates</h3>
+          <p>Fried chicken, rice bowls, pastas and full mains — lunch, dinner, anytime.</p>
+          <span class="price">From ₹340</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (14).webp" alt="Bakery Sweets"></div>
+        <div class="menu-card-body">
+          <h3>Desserts &amp; Bakes</h3>
+          <p>Cookies, brownies, doughnuts, danishes — sweet things from our bakery counter.</p>
+          <span class="price">From ₹140</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (10).webp" alt="Coffee & Brownie Pairing"></div>
+        <div class="menu-card-body">
+          <h3>Pair &amp; Share</h3>
+          <p>Coffee &amp; bake pairings, brownie + latte sets — perfect for two.</p>
+          <span class="price">From ₹380</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="container">
+    <div class="feature-grid">
+      <img src="./images/unnamed (10).webp" alt="Pour over coffee at Amari">
+      <div class="feature-text">
+        <span class="eyebrow">Specialty Coffee Bar</span>
+        <h2>Coffee, brewed with intent.</h2>
+        <p>We source carefully, roast in small batches and brew slowly. Whether it's a V60 pour-over, an espresso pulled fresh or our signature cold drip — every cup is made the way it's meant to be.</p>
+        <p>Ask our baristas what's on the bar today — there's always something new.</p>
       </div>
     </div>
   </div>
@@ -170,18 +235,19 @@ section{padding:60px 0}
 <section id="gallery">
   <div class="container">
     <div class="section-title">
-      <h2>A Look Inside</h2>
-      <p>Moments from the cafe</p>
+      <span class="eyebrow">Gallery</span>
+      <h2>Inside Amari</h2>
+      <p>The room, the coffee, the bakery counter.</p>
     </div>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=600&q=80" alt="">
+      <div class="item"><img src="./images/unnamed.webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (4).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (7).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (16).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (17).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (11).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (9).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (5).webp" alt=""></div>
     </div>
   </div>
 </section>
@@ -189,33 +255,32 @@ section{padding:60px 0}
 <section id="contact" class="contact">
   <div class="container">
     <div class="section-title">
-      <h2>Visit Amari</h2>
-      <p>We'd love to have you over</p>
+      <span class="eyebrow">Visit Amari</span>
+      <h2>Stop by, settle in, stay a while.</h2>
+      <p>We open early and close late — breakfast through dinner, every day.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card">
         <div class="icon">📞</div>
-        <h3>Call Us</h3>
+        <h3>Call</h3>
         <p><a href="tel:+919903812932">+91 99038 12932</a></p>
       </div>
       <div class="contact-card">
         <div class="icon">📍</div>
         <h3>Find Us</h3>
-        <p><a href="https://www.google.com/maps/place/Amari+Cafe" target="_blank">View on Google Maps</a></p>
+        <p><a href="https://www.google.com/maps/place/Amari+Cafe" target="_blank">Open in Google Maps</a></p>
       </div>
       <div class="contact-card">
         <div class="icon">🕒</div>
         <h3>Open Daily</h3>
-        <p>8:00 AM — 10:00 PM</p>
+        <p>8:00 AM — 10:30 PM</p>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    © Amari · Specialty Coffee, Eating House &amp; Artisanal Bakery
-  </div>
+  <div class="container">© AMARI · Specialty Coffee · Artisanal Bakery · All Day Diner</div>
 </footer>
 
 </body>

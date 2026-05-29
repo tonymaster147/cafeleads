@@ -3,83 +3,96 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Coffee House, New Town — A Kolkata Tradition</title>
-<meta name="description" content="Coffee House, New Town — the legendary Kolkata coffee tradition continues. Iconic infusion, classic snacks and warm adda since forever." />
+<title>Coffee House, New Town — Multi-Cuisine Restaurant &amp; Café</title>
+<meta name="description" content="Coffee House, New Town — a modern multi-cuisine restaurant and café in New Town, Kolkata. Indoor dining, rooftop terrace, all-day menu." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f5f0e6;--ink:#1f2218;--muted:#5e6155;--accent:#3d6b3a;--accent-dark:#264a25;--card:#fff;}
+:root{--bg:#f4f0ea;--paper:#ffffff;--ink:#1f2a24;--muted:#5a6760;--accent:#2f5d3a;--accent-dark:#1d3e26;--gold:#b08838;--card:#fff;}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-h1,h2,h3{font-family:'Lora',serif;font-weight:700;letter-spacing:-.3px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+h1,h2,h3{font-family:'Marcellus',serif;font-weight:400;letter-spacing:-.2px}
 a{color:inherit;text-decoration:none}
 .container{max-width:1180px;margin:0 auto;padding:0 24px}
 
-header{position:sticky;top:0;background:rgba(245,240,230,.95);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(0,0,0,.08)}
-nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font-family:'Lora',serif;font-size:26px;font-weight:700;color:var(--accent-dark);line-height:1.1}
-.logo small{display:block;font-size:11px;font-weight:400;color:var(--muted);font-family:'Source Sans 3',sans-serif;letter-spacing:2px;text-transform:uppercase}
+header{position:sticky;top:0;background:rgba(244,240,234,.96);backdrop-filter:blur(10px);z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{display:flex;flex-direction:column;line-height:1.1}
+.logo .brand{font-family:'Marcellus',serif;font-size:24px;color:var(--accent-dark)}
+.logo .sub{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--muted);margin-top:4px}
 .nav-links{display:flex;gap:32px}
-.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;transition:color .2s}
 .nav-links a:hover{color:var(--accent)}
-.cta{background:var(--accent);color:#fff!important;padding:10px 20px;border-radius:4px;font-size:14px;font-weight:500}
+.cta{background:var(--accent);color:#fff!important;padding:11px 22px;border-radius:2px;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase}
 
-.hero{min-height:88vh;display:flex;align-items:center;background:linear-gradient(rgba(31,34,24,.6),rgba(31,34,24,.7)),url('https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=1600&q=80') center/cover;color:#fff;text-align:center}
-.hero-content{max-width:820px;margin:0 auto;padding:60px 24px}
-.hero .tagline{display:inline-block;border:1px solid rgba(255,255,255,.4);padding:6px 16px;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:24px}
-.hero h1{font-size:clamp(38px,6.5vw,72px);line-height:1.1;margin-bottom:20px}
-.hero p{font-size:clamp(16px,2vw,20px);opacity:.92;margin-bottom:32px;font-weight:300}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:4px;font-weight:500;transition:transform .2s,background .2s;margin:6px;font-size:15px}
+.hero{min-height:90vh;display:flex;align-items:center;background:linear-gradient(rgba(20,28,22,.55),rgba(20,28,22,.7)),url('./images/unnamed (8).webp') center/cover;color:#f4f0ea;text-align:center}
+.hero-content{max-width:840px;margin:0 auto;padding:60px 24px}
+.hero .tagline{display:inline-block;border-top:1px solid rgba(244,240,234,.4);border-bottom:1px solid rgba(244,240,234,.4);padding:8px 22px;font-size:11px;letter-spacing:5px;text-transform:uppercase;margin-bottom:30px;color:#d4c69a}
+.hero h1{font-size:clamp(42px,7vw,78px);line-height:1.05;margin-bottom:24px;font-family:'Marcellus',serif}
+.hero p{font-size:clamp(16px,2vw,20px);opacity:.92;margin-bottom:36px;font-weight:300;max-width:580px;margin-left:auto;margin-right:auto}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 32px;border-radius:2px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;transition:transform .2s,background .2s;margin:6px}
 .btn:hover{background:var(--accent-dark);transform:translateY(-2px)}
-.btn-outline{background:transparent;border:2px solid #fff}
+.btn-outline{background:transparent;border:2px solid #f4f0ea}
 
-section{padding:90px 0}
+section{padding:100px 0}
 .section-title{text-align:center;margin-bottom:60px}
-.section-title h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:12px}
-.section-title p{color:var(--muted);font-size:17px}
+.section-title .eyebrow{display:inline-block;color:var(--accent);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;font-weight:600}
+.section-title h2{font-size:clamp(32px,5vw,48px);margin-bottom:12px;line-height:1.1}
+.section-title p{color:var(--muted);font-size:17px;max-width:580px;margin:0 auto}
 
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-grid img{width:100%;border-radius:6px;box-shadow:0 20px 40px rgba(0,0,0,.12)}
-.about-text h2{font-size:38px;margin-bottom:20px}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.about-img img{width:100%;border-radius:4px;box-shadow:0 24px 50px rgba(0,0,0,.15)}
+.about-text .eyebrow{display:inline-block;color:var(--accent);font-size:12px;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px;font-weight:600}
+.about-text h2{font-size:40px;margin-bottom:20px;line-height:1.15}
 .about-text p{color:var(--muted);margin-bottom:16px}
-.stat-row{display:flex;gap:30px;margin-top:30px}
-.stat{text-align:center}
-.stat .num{font-family:'Lora',serif;font-size:32px;color:var(--accent);font-weight:700}
-.stat .lbl{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;padding-top:30px;border-top:1px solid rgba(0,0,0,.08)}
+.pillar{text-align:center}
+.pillar .num{font-family:'Marcellus',serif;font-size:24px;color:var(--accent);display:block;margin-bottom:4px}
+.pillar .lbl{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px}
 
-.menu{background:#fff}
+.menu{background:var(--paper)}
 .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
-.menu-card{background:var(--bg);border-radius:6px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid rgba(0,0,0,.04)}
-.menu-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
-.menu-card img{width:100%;height:220px;object-fit:cover}
-.menu-card-body{padding:22px}
-.menu-card h3{font-size:22px;margin-bottom:8px}
-.menu-card p{color:var(--muted);font-size:14px;margin-bottom:12px}
-.price{color:var(--accent);font-weight:600;font-size:18px}
+.menu-card{background:var(--bg);border-radius:4px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid rgba(0,0,0,.05)}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(0,0,0,.1)}
+.menu-card .img-wrap{height:240px;overflow:hidden}
+.menu-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.menu-card:hover img{transform:scale(1.05)}
+.menu-card-body{padding:24px}
+.menu-card h3{font-size:24px;margin-bottom:8px}
+.menu-card p{color:var(--muted);font-size:14px;margin-bottom:14px;line-height:1.55}
+.price{color:var(--accent);font-weight:600;font-size:17px;font-family:'Marcellus',serif}
+
+.feature{background:var(--ink);color:#f4f0ea;padding:90px 0}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.feature-grid img{width:100%;border-radius:4px}
+.feature-text .eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase;font-weight:600;display:inline-block;margin-bottom:14px}
+.feature-text h2{font-size:42px;line-height:1.1;margin-bottom:20px;color:#f4f0ea}
+.feature-text p{color:#bdc4be;margin-bottom:18px}
 
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.gallery-grid img{width:100%;height:240px;object-fit:cover;border-radius:4px;transition:transform .3s}
-.gallery-grid img:hover{transform:scale(1.03)}
+.gallery-grid .item{position:relative;height:260px;border-radius:4px;overflow:hidden}
+.gallery-grid .item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-grid .item:hover img{transform:scale(1.06)}
 
-.contact{background:var(--ink);color:#fff}
-.contact .section-title h2{color:#fff}
-.contact .section-title p{color:#b5b7ad}
+.contact{background:#15201a;color:#f4f0ea}
+.contact .section-title h2{color:#f4f0ea}
+.contact .section-title p,.contact .section-title .eyebrow{color:#d4c69a}
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;text-align:center}
-.contact-card{padding:30px;background:rgba(255,255,255,.05);border-radius:6px}
-.contact-card .icon{font-size:34px;margin-bottom:14px}
-.contact-card h3{font-size:18px;margin-bottom:8px;color:#fff;font-family:'Source Sans 3',sans-serif;font-weight:600}
-.contact-card p,.contact-card a{color:#b5b7ad;font-size:15px}
-.contact-card a:hover{color:#7fb37a}
+.contact-card{padding:36px 24px;background:rgba(255,255,255,.04);border-radius:4px;border:1px solid rgba(212,198,154,.15)}
+.contact-card .icon{font-size:32px;margin-bottom:16px;color:var(--gold)}
+.contact-card h3{font-size:17px;margin-bottom:10px;color:#f4f0ea;font-family:'Inter',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.contact-card p,.contact-card a{color:#bdc4be;font-size:15px}
+.contact-card a:hover{color:var(--gold)}
 
-footer{background:#13160e;color:#7a7d72;padding:30px 0;text-align:center;font-size:14px}
+footer{background:#0e1612;color:#6e7872;padding:30px 0;text-align:center;font-size:13px;letter-spacing:1px}
 
 @media(max-width:768px){
 .nav-links{display:none}
-.about-grid{grid-template-columns:1fr}
-section{padding:60px 0}
-.stat-row{justify-content:center;flex-wrap:wrap}
+.about-grid,.feature-grid{grid-template-columns:1fr}
+section{padding:70px 0}
+.pillars{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -88,40 +101,46 @@ section{padding:60px 0}
 <header>
   <div class="container">
     <nav>
-      <div class="logo">Coffee House<small>New Town</small></div>
+      <div class="logo">
+        <span class="brand">Coffee House</span>
+        <span class="sub">New Town</span>
+      </div>
       <div class="nav-links">
-        <a href="#about">Heritage</a>
+        <a href="#about">About</a>
         <a href="#menu">Menu</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Visit</a>
       </div>
-      <a href="tel:+919831093630" class="cta">Call Us</a>
+      <a href="tel:+919831093630" class="cta">Reserve</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <span class="tagline">A Kolkata Tradition</span>
-    <h1>Coffee. Adda.<br>And Everything In Between.</h1>
-    <p>The legendary Coffee House experience — now in New Town. Iconic infusion, classic snacks, and conversations that last for hours.</p>
+    <span class="tagline">Multi-Cuisine · Indoor &amp; Rooftop · New Town, Kolkata</span>
+    <h1>Good food.<br>Good coffee.<br>Great views.</h1>
+    <p>A modern multi-cuisine restaurant and café in the heart of New Town — with a spacious indoor dining room and an open rooftop terrace.</p>
     <a href="#menu" class="btn">View Menu</a>
-    <a href="#contact" class="btn btn-outline">Visit Us</a>
+    <a href="#contact" class="btn btn-outline">Reserve a Table</a>
   </div>
 </section>
 
 <section id="about">
   <div class="container">
     <div class="about-grid">
-      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=80" alt="Inside Coffee House">
+      <div class="about-img">
+        <img src="./images/unnamed (8).webp" alt="Coffee House New Town dining hall">
+      </div>
       <div class="about-text">
-        <h2>Where Stories Are Brewed</h2>
-        <p>Coffee House is more than a café — it's an institution. A place where students debate, writers find their next line, friends reunite over endless cups of coffee, and time slows down just a little.</p>
-        <p>Our New Town outlet brings that same spirit to one of Kolkata's newest neighbourhoods — high ceilings, easy chairs, strong coffee and the warm hum of conversation.</p>
-        <div class="stat-row">
-          <div class="stat"><div class="num">4.0★</div><div class="lbl">Google Rating</div></div>
-          <div class="stat"><div class="num">11.4K+</div><div class="lbl">Reviews</div></div>
-          <div class="stat"><div class="num">7 Days</div><div class="lbl">A Week</div></div>
+        <span class="eyebrow">About Us</span>
+        <h2>A New Town favourite for every kind of meal.</h2>
+        <p>Coffee House in New Town is a multi-cuisine restaurant where you can swing in for a quick coffee and grilled sandwich, settle in for a long lunch, or come up to the rooftop for an evening of food and conversation.</p>
+        <p>Bright dining room, formal seating, a full bar of beverages and a menu that spans Indian, Chinese and continental — all in one place.</p>
+        <div class="pillars">
+          <div class="pillar"><span class="num">★ 4.0</span><span class="lbl">Google Rating</span></div>
+          <div class="pillar"><span class="num">11.4K+</span><span class="lbl">Reviews</span></div>
+          <div class="pillar"><span class="num">Rooftop</span><span class="lbl">Available</span></div>
         </div>
       </div>
     </div>
@@ -131,41 +150,88 @@ section{padding:60px 0}
 <section id="menu" class="menu">
   <div class="container">
     <div class="section-title">
-      <h2>The Menu</h2>
-      <p>Classics that never go out of style</p>
+      <span class="eyebrow">The Menu</span>
+      <h2>Something for Every Craving</h2>
+      <p>Indian, Chinese, continental and café favourites — served all day.</p>
     </div>
     <div class="menu-grid">
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?w=600&q=80" alt="Infusion">
+        <div class="img-wrap"><img src="./images/unnamed.webp" alt="Coffee"></div>
         <div class="menu-card-body">
-          <h3>The Famous Infusion</h3>
-          <p>Hot and cold coffees brewed the Coffee House way. Strong, smooth, unforgettable.</p>
-          <span class="price">From ₹60</span>
-        </div>
-      </div>
-      <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=600&q=80" alt="Snacks">
-        <div class="menu-card-body">
-          <h3>Snacks &amp; Pakoras</h3>
-          <p>Fish fry, mutton kobiraji, chicken pakora, kabiraji cutlet — Kolkata classics.</p>
+          <h3>Coffee &amp; Café</h3>
+          <p>Cappuccinos, lattes, espresso, hot chocolate — fresh-brewed all day.</p>
           <span class="price">From ₹120</span>
         </div>
       </div>
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600&q=80" alt="Continental">
+        <div class="img-wrap"><img src="./images/unnamed.jpg" alt="Cold Coffee"></div>
         <div class="menu-card-body">
-          <h3>Mains &amp; Continental</h3>
-          <p>Chicken sandwich, omelettes, mughlai paratha and full plate meals.</p>
-          <span class="price">From ₹180</span>
+          <h3>Cold Coffees &amp; Shakes</h3>
+          <p>Iced coffees, frappes, milkshakes and our signature cold brew.</p>
+          <span class="price">From ₹160</span>
         </div>
       </div>
       <div class="menu-card">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" alt="Desserts">
+        <div class="img-wrap"><img src="./images/unnamed (3).webp" alt="Grilled Sandwich"></div>
         <div class="menu-card-body">
-          <h3>Sweet Endings</h3>
-          <p>Caramel custard, ice cream and chocolate desserts to finish the adda.</p>
-          <span class="price">From ₹90</span>
+          <h3>Sandwiches &amp; Snacks</h3>
+          <p>Grilled sandwiches, club sandwiches and quick bites with fries.</p>
+          <span class="price">From ₹140</span>
         </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (2).webp" alt="Fish Fingers"></div>
+        <div class="menu-card-body">
+          <h3>Starters &amp; Sides</h3>
+          <p>Fish fingers, chicken pakora, fries, kabiraji and Kolkata favourites.</p>
+          <span class="price">From ₹220</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (9).webp" alt="Noodles & Chinese"></div>
+        <div class="menu-card-body">
+          <h3>Chinese &amp; Asian</h3>
+          <p>Hakka noodles, chilli chicken, fried rice and full Indo-Chinese mains.</p>
+          <span class="price">From ₹240</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (7).webp" alt="Grilled Fish"></div>
+        <div class="menu-card-body">
+          <h3>Continental Mains</h3>
+          <p>Grilled fish, chicken steaks with sides — comforting continental plates.</p>
+          <span class="price">From ₹320</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (4).webp" alt="Caramel Custard"></div>
+        <div class="menu-card-body">
+          <h3>Desserts</h3>
+          <p>Caramel custard, ice cream, sundaes and chocolate desserts.</p>
+          <span class="price">From ₹140</span>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (1).webp" alt="Cold Coffee Glass"></div>
+        <div class="menu-card-body">
+          <h3>Coolers &amp; Mocktails</h3>
+          <p>Iced teas, refreshers and signature mocktails for the rooftop sunset.</p>
+          <span class="price">From ₹140</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="container">
+    <div class="feature-grid">
+      <img src="./images/unnamed (6).webp" alt="Rooftop terrace at sunset">
+      <div class="feature-text">
+        <span class="eyebrow">Rooftop Terrace</span>
+        <h2>Sunset, skyline, supper.</h2>
+        <p>Our open-air rooftop is the best spot in New Town for an evening out — palms in planters, soft lighting, and a clear sky overhead.</p>
+        <p>Perfect for casual dinners, small get-togethers and long conversations over coffee.</p>
       </div>
     </div>
   </div>
@@ -174,18 +240,19 @@ section{padding:60px 0}
 <section id="gallery">
   <div class="container">
     <div class="section-title">
-      <h2>A Glimpse Inside</h2>
-      <p>The room, the people, the coffee</p>
+      <span class="eyebrow">Gallery</span>
+      <h2>Inside Coffee House</h2>
+      <p>The dining room, the rooftop, the food.</p>
     </div>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1542181961-9590d0c79dab?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="">
-      <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?w=600&q=80" alt="">
+      <div class="item"><img src="./images/unnamed (8).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (6).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (5).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed.webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (3).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (9).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (4).webp" alt=""></div>
+      <div class="item"><img src="./images/unnamed (2).webp" alt=""></div>
     </div>
   </div>
 </section>
@@ -193,8 +260,9 @@ section{padding:60px 0}
 <section id="contact" class="contact">
   <div class="container">
     <div class="section-title">
-      <h2>Come Find Us</h2>
-      <p>In the heart of New Town</p>
+      <span class="eyebrow">Visit Us</span>
+      <h2>Reserve a Table</h2>
+      <p>Walk in or call ahead — we're open every day, with rooftop seating after sunset.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-card">
@@ -204,20 +272,20 @@ section{padding:60px 0}
       </div>
       <div class="contact-card">
         <div class="icon">📍</div>
-        <h3>Location</h3>
-        <p><a href="https://www.google.com/maps/place/Coffee+House,+New+Town" target="_blank">View on Google Maps</a></p>
+        <h3>Find Us</h3>
+        <p><a href="https://www.google.com/maps/place/Coffee+House,+New+Town" target="_blank">Open in Google Maps</a></p>
       </div>
       <div class="contact-card">
         <div class="icon">🕒</div>
-        <h3>Hours</h3>
-        <p>9:00 AM — 10:00 PM</p>
+        <h3>Open Daily</h3>
+        <p>10:00 AM — 11:00 PM</p>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">© Coffee House, New Town · A Kolkata tradition</div>
+  <div class="container">© Coffee House, New Town · Multi-Cuisine Restaurant &amp; Café</div>
 </footer>
 
 </body>
