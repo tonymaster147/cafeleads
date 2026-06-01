@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Buddy's Yard Café — Neon Nights, Hot Coffee, New Town</title>
+<meta name="description" content="Buddy's Yard Café — a neon-lit café &amp; lounge in New Town, Kolkata. Pastas, pizzas, garlic bread, coffees and shakes under the glow." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0613;--bg-2:#120a26;--ink:#f2eaff;--muted:#9892b8;--neon:#ff2d92;--neon-2:#00e5ff;--neon-3:#a855f7;--line:rgba(255,255,255,.08);}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Audiowide',cursive;font-weight:400;letter-spacing:1px;line-height:1.05;text-transform:uppercase}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1240px;margin:0 auto;padding:0 28px}
+
+/* Body glow background */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:
+  radial-gradient(circle at 20% 10%,rgba(168,85,247,.18),transparent 40%),
+  radial-gradient(circle at 80% 30%,rgba(0,229,255,.12),transparent 40%),
+  radial-gradient(circle at 60% 85%,rgba(255,45,146,.15),transparent 45%)}
+body > *{position:relative;z-index:1}
+
+/* Nav */
+header{position:sticky;top:0;background:rgba(10,6,19,.78);backdrop-filter:blur(16px);z-index:50;border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{display:flex;align-items:center;gap:14px}
+.logo .badge{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--neon),var(--neon-3));display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;box-shadow:0 0 20px rgba(255,45,146,.5)}
+.logo .text{display:flex;flex-direction:column;line-height:1}
+.logo .brand{font-family:'Audiowide',cursive;font-size:18px;letter-spacing:1.5px;color:#fff}
+.logo .sub{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--neon-2);margin-top:4px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:1px;text-transform:uppercase;transition:color .2s,text-shadow .2s}
+.nav-links a:hover{color:#fff;text-shadow:0 0 8px var(--neon-2)}
+.cta{background:linear-gradient(90deg,var(--neon),var(--neon-3));color:#fff!important;padding:10px 22px;border-radius:30px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;box-shadow:0 0 16px rgba(255,45,146,.45);transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 0 24px rgba(255,45,146,.7)}
+
+/* Hero */
+.hero{min-height:92vh;display:flex;align-items:center;padding:80px 0;position:relative}
+.hero-bg{position:absolute;inset:0;background:url('./images/unnamed (10).webp') center/cover;opacity:.35;filter:saturate(1.2) contrast(1.05);z-index:-1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,var(--bg) 100%),linear-gradient(90deg,var(--bg) 5%,transparent 50%);z-index:0;pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:780px}
+.hero .live-tag{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--neon-2);margin-bottom:28px;padding:8px 16px;border:1px solid var(--neon-2);border-radius:30px;background:rgba(0,229,255,.05)}
+.hero .live-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--neon);box-shadow:0 0 12px var(--neon);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-size:clamp(52px,9vw,110px);margin-bottom:28px;color:#fff;text-shadow:0 0 40px rgba(168,85,247,.5)}
+.hero h1 .glow{color:var(--neon-2);text-shadow:0 0 20px var(--neon-2),0 0 40px rgba(0,229,255,.4)}
+.hero h1 .pink{color:var(--neon);text-shadow:0 0 20px var(--neon),0 0 40px rgba(255,45,146,.5)}
+.hero p{font-size:clamp(16px,1.6vw,19px);color:#c5bee0;max-width:540px;margin-bottom:36px;font-weight:300}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--neon),var(--neon-3));color:#fff;padding:15px 30px;border-radius:30px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;transition:transform .2s,box-shadow .2s;box-shadow:0 0 24px rgba(255,45,146,.4);border:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 32px rgba(255,45,146,.7)}
+.btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.3);box-shadow:none}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:var(--neon-2);color:var(--neon-2);box-shadow:0 0 16px rgba(0,229,255,.4)}
+
+/* Sections */
+section{padding:120px 0;position:relative}
+.eyebrow{display:inline-block;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--neon-2);margin-bottom:18px;padding:6px 14px;border:1px solid rgba(0,229,255,.3);border-radius:30px;background:rgba(0,229,255,.05)}
+.section-head{text-align:center;margin-bottom:70px;max-width:700px;margin-left:auto;margin-right:auto}
+.section-head h2{font-size:clamp(36px,5.5vw,58px);margin-bottom:18px;color:#fff}
+.section-head h2 em{font-style:normal;color:var(--neon)}
+.section-head p{color:var(--muted);font-size:17px;font-weight:300}
+
+/* Story */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story-img{position:relative}
+.story-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.story-img::after{content:"";position:absolute;inset:-2px;border-radius:8px;background:linear-gradient(135deg,var(--neon),transparent 40%,transparent 60%,var(--neon-2));z-index:-1;opacity:.4;filter:blur(20px)}
+.story-text h2{font-size:clamp(34px,5vw,52px);color:#fff;margin-bottom:24px}
+.story-text h2 em{color:var(--neon-2);font-style:normal}
+.story-text p{color:var(--muted);font-size:16.5px;margin-bottom:18px}
+.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;padding-top:30px;border-top:1px solid var(--line)}
+.story-stats .stat{}
+.story-stats .n{font-family:'Audiowide',cursive;font-size:28px;color:var(--neon);text-shadow:0 0 12px rgba(255,45,146,.5);display:block;margin-bottom:6px}
+.story-stats .l{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* Menu */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.menu-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative}
+.menu-card:hover{transform:translateY(-6px);border-color:rgba(0,229,255,.4);box-shadow:0 14px 40px rgba(168,85,247,.18)}
+.menu-card .img-wrap{height:220px;overflow:hidden;position:relative}
+.menu-card .img-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(10,6,19,.6) 100%);pointer-events:none}
+.menu-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.menu-card:hover img{transform:scale(1.05)}
+.menu-card-body{padding:22px}
+.menu-card h3{font-size:22px;color:#fff;margin-bottom:8px;text-shadow:0 0 12px rgba(168,85,247,.3)}
+.menu-card p{color:var(--muted);font-size:14px;margin-bottom:14px;line-height:1.55}
+.menu-card .price{display:inline-block;font-family:'Audiowide',cursive;color:var(--neon-2);font-size:18px;padding:4px 12px;border:1px solid var(--neon-2);border-radius:30px;background:rgba(0,229,255,.05);text-shadow:0 0 8px rgba(0,229,255,.4)}
+
+/* Vibe section */
+.vibe{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);padding:120px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.vibe::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 50%,rgba(255,45,146,.15),transparent 40%);pointer-events:none}
+.vibe-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.vibe img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:8px}
+.vibe h2{font-size:clamp(34px,5vw,54px);color:#fff;margin-bottom:24px}
+.vibe h2 em{color:var(--neon);font-style:normal;text-shadow:0 0 16px rgba(255,45,146,.5)}
+.vibe p{color:var(--muted);font-size:17px;margin-bottom:18px}
+.vibe-features{display:grid;gap:14px;margin-top:30px}
+.vibe-feat{display:flex;gap:14px;align-items:flex-start}
+.vibe-feat .dot{width:6px;height:6px;border-radius:50%;background:var(--neon-2);box-shadow:0 0 10px var(--neon-2);margin-top:9px;flex-shrink:0}
+.vibe-feat span{color:#d8d2ee;font-size:15px}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.gallery-grid .g{aspect-ratio:1/1;overflow:hidden;border-radius:8px;border:1px solid var(--line);position:relative;transition:transform .25s}
+.gallery-grid .g:hover{transform:scale(1.03);border-color:rgba(0,229,255,.3)}
+.gallery-grid .g img{width:100%;height:100%;object-fit:cover;transition:transform .6s,filter .4s;filter:saturate(1.1)}
+.gallery-grid .g:hover img{transform:scale(1.06);filter:saturate(1.3)}
+
+/* Visit */
+.visit{background:var(--bg-2);padding:120px 0;border-top:1px solid var(--line)}
+.visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.visit-card{padding:32px 24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:12px;text-align:center;transition:border-color .2s,transform .2s}
+.visit-card:hover{border-color:var(--neon);transform:translateY(-4px)}
+.visit-card .icon{font-size:30px;margin-bottom:16px;color:var(--neon-2);filter:drop-shadow(0 0 12px var(--neon-2))}
+.visit-card h3{font-size:13px;color:var(--neon-2);font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px}
+.visit-card p,.visit-card a{font-family:'Audiowide',cursive;font-size:18px;color:#fff;letter-spacing:.5px}
+.visit-card a:hover{color:var(--neon)}
+
+footer{background:#06030f;color:var(--muted);padding:30px 0;text-align:center;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;border-top:1px solid var(--line)}
+
+@media(max-width:900px){
+.nav-links{display:none}
+.story-grid,.vibe-grid{grid-template-columns:1fr;gap:40px}
+section,.hero{padding:80px 0}
+.story-stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <div class="badge">🐾</div>
+        <div class="text">
+          <span class="brand">Buddy's Yard</span>
+          <span class="sub">Café · New Town</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#story">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#vibe">Vibe</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <a href="tel:+916290808478" class="cta">Reserve →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <span class="live-tag">Now Open · Late Nights</span>
+    <h1>Pastas. Coffee.<br><span class="glow">Neon</span> <span class="pink">Nights.</span></h1>
+    <p>A late-night café &amp; lounge tucked inside New Town. Loaded pastas, cheesy garlic bread, signature shakes — all under that warm purple glow.</p>
+    <div class="btn-row">
+      <a href="#menu" class="btn">View Menu</a>
+      <a href="tel:+916290808478" class="btn btn-ghost">Call to Reserve</a>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="./images/unnamed (10).webp" alt="Inside Buddy's Yard with cityscape mural">
+      </div>
+      <div class="story-text">
+        <span class="eyebrow">Our Story</span>
+        <h2>The neighbourhood's <em>after-hours</em> hangout.</h2>
+        <p>Buddy's Yard is where New Town comes to slow down — a café and lounge with moody lighting, a hand-painted city-skyline mural and pastas that arrive bubbling hot.</p>
+        <p>Whether you're here to work late on your laptop, catch up with friends over coffee, or just escape the mall buzz for a bit — pull up a chair. We've saved one for you.</p>
+        <div class="story-stats">
+          <div class="stat"><span class="n">4.3 ★</span><span class="l">Google Rating</span></div>
+          <div class="stat"><span class="n">82+</span><span class="l">Happy Reviews</span></div>
+          <div class="stat"><span class="n">Late</span><span class="l">Open Till 11pm</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Menu</span>
+      <h2>Hot plates. <em>Cold drinks.</em></h2>
+      <p>Pastas, pizzas, garlic bread, coffees and signature shakes — built for shareable evenings.</p>
+    </div>
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (13).webp" alt="Alfredo and Arrabbiata pastas"></div>
+        <div class="menu-card-body">
+          <h3>Alfredo Pasta</h3>
+          <p>Penne in a rich creamy white sauce with herbs and parmesan.</p>
+          <span class="price">₹240</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (9).webp" alt="Creamy white sauce pasta"></div>
+        <div class="menu-card-body">
+          <h3>Creamy Penne</h3>
+          <p>Cheesy, creamy penne with chicken and oregano — a guest favourite.</p>
+          <span class="price">₹260</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (1).webp" alt="Cheesy garlic bread with cappuccino"></div>
+        <div class="menu-card-body">
+          <h3>Cheesy Garlic Bread</h3>
+          <p>Toasted bread loaded with mozzarella, herbs and house dip.</p>
+          <span class="price">₹160</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (8).webp" alt="Loaded chicken pizza"></div>
+        <div class="menu-card-body">
+          <h3>Loaded Pizza</h3>
+          <p>Hand-tossed, bubbling cheese, generous toppings — chicken, jalapeño, corn.</p>
+          <span class="price">₹280</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed.webp" alt="Cappuccino"></div>
+        <div class="menu-card-body">
+          <h3>Hot Cappuccino</h3>
+          <p>Pulled fresh — bold espresso, thick milk foam, chocolate art.</p>
+          <span class="price">₹120</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (3).webp" alt="Brookie Shake"></div>
+        <div class="menu-card-body">
+          <h3>Brookie Shake</h3>
+          <p>Thick milkshake topped with a brownie-cookie sandwich. Photo-ready.</p>
+          <span class="price">₹220</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (4).webp" alt="Watermelon Mocktail"></div>
+        <div class="menu-card-body">
+          <h3>Watermelon Cooler</h3>
+          <p>Fresh watermelon, mint, lime — served tall and ice-cold.</p>
+          <span class="price">₹160</span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (7).webp" alt="Crunchy Salad Bowl"></div>
+        <div class="menu-card-body">
+          <h3>Crunchy Salad Bowl</h3>
+          <p>Crisp greens, cabbage, chicken slices and a tangy house dressing.</p>
+          <span class="price">₹220</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="vibe" class="vibe">
+  <div class="container">
+    <div class="vibe-grid">
+      <img src="./images/unnamed (11).webp" alt="The lounge area at Buddy's Yard">
+      <div>
+        <span class="eyebrow">The Vibe</span>
+        <h2>A different kind of <em>coffee shop.</em></h2>
+        <p>Pendant lights, a city-skyline wall mural, plush wood-frame chairs and just enough purple LED to make every photo pop. We're built for hanging out — not rushing.</p>
+        <div class="vibe-features">
+          <div class="vibe-feat"><span class="dot"></span><span>Comfortable lounge seating perfect for work-from-café days</span></div>
+          <div class="vibe-feat"><span class="dot"></span><span>Free Wi-Fi and plenty of power points</span></div>
+          <div class="vibe-feat"><span class="dot"></span><span>Group tables for friends, dates and small celebrations</span></div>
+          <div class="vibe-feat"><span class="dot"></span><span>Inside the mall — easy parking, air-conditioned, mall-side access</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Gallery</span>
+      <h2>Under the <em>Glow.</em></h2>
+      <p>The café, the food, the late-night magic.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g"><img src="./images/unnamed (10).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (11).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (13).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed.webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (1).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (3).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (4).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (8).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (9).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (7).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (5).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (12).webp" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Find Us</span>
+      <h2>Drop by <em>tonight.</em></h2>
+      <p>Inside the mall, New Town, Kolkata. Walk-ins welcome — reservations recommended on weekends.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <div class="icon">📞</div>
+        <h3>Call</h3>
+        <p><a href="tel:+916290808478">+91 62908 08478</a></p>
+      </div>
+      <div class="visit-card">
+        <div class="icon">📍</div>
+        <h3>Location</h3>
+        <p><a href="https://www.google.com/maps/place/Buddy's+Yard+Cafe" target="_blank">Google Maps →</a></p>
+      </div>
+      <div class="visit-card">
+        <div class="icon">🕒</div>
+        <h3>Open</h3>
+        <p>11 AM — 11 PM</p>
+      </div>
+      <div class="visit-card">
+        <div class="icon">★</div>
+        <h3>Rated</h3>
+        <p>4.3 / 82</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© Buddy's Yard Café · New Town, Kolkata · Stay a while.</footer>
+
+</body>
+</html>
