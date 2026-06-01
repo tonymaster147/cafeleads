@@ -4,24 +4,25 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cafe Demos — Website Samples</title>
-<meta name="description" content="Single-page website demos built for three Kolkata cafes." />
+<meta name="description" content="Single-page website demos built for Kolkata cafes." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',sans-serif;background:#0f0f12;color:#fff;min-height:100vh;line-height:1.6}
-.wrap{max-width:1100px;margin:0 auto;padding:80px 24px}
+.wrap{max-width:1200px;margin:0 auto;padding:80px 24px}
 header{text-align:center;margin-bottom:60px}
 header h1{font-size:clamp(32px,5vw,52px);font-weight:700;margin-bottom:14px;letter-spacing:-1px}
-header p{color:#a0a0aa;font-size:18px;max-width:600px;margin:0 auto}
+header p{color:#a0a0aa;font-size:18px;max-width:620px;margin:0 auto}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .card{background:#1a1a20;border-radius:16px;overflow:hidden;border:1px solid #26262e;transition:transform .25s,border-color .25s}
 .card:hover{transform:translateY(-6px);border-color:#444}
-.card .img{width:100%;height:220px;background-size:cover;background-position:center}
+.card .img{width:100%;height:200px;background-size:cover;background-position:center}
 .card-body{padding:24px}
+.card .style-chip{display:inline-block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8a8a95;background:#26262e;padding:4px 10px;border-radius:20px;margin-bottom:10px}
 .card h3{font-size:22px;font-weight:600;margin-bottom:6px}
 .card .meta{color:#a0a0aa;font-size:14px;margin-bottom:16px}
-.card a{display:inline-block;background:#fff;color:#0f0f12;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:500;font-size:14px;transition:opacity .2s}
-.card a:hover{opacity:.85}
+.card a.view{display:inline-block;background:#fff;color:#0f0f12;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:500;font-size:14px;transition:opacity .2s}
+.card a.view:hover{opacity:.85}
 footer{text-align:center;margin-top:80px;color:#666;font-size:14px}
 </style>
 </head>
@@ -29,33 +30,70 @@ footer{text-align:center;margin-top:80px;color:#666;font-size:14px}
 <div class="wrap">
   <header>
     <h1>Cafe Website Demos</h1>
-    <p>Single-page website samples built for three Kolkata cafes. Mobile-responsive, fast-loading, ready to customize.</p>
+    <p>Single-page website samples built for six Kolkata cafes. Each one styled differently to match the cafe's own personality — mobile-responsive, fast-loading, ready to ship.</p>
   </header>
   <div class="grid">
+
     <div class="card">
       <div class="img" style="background-image:url('./amari/images/unnamed (4).webp')"></div>
       <div class="card-body">
+        <span class="style-chip">Warm Editorial</span>
         <h3>Amari</h3>
         <div class="meta">Specialty Coffee · Bakery · All Day Diner · 4.7 ★</div>
-        <a href="./amari/">View Demo →</a>
+        <a href="./amari/" class="view">View Demo →</a>
       </div>
     </div>
+
     <div class="card">
       <div class="img" style="background-image:url('./lray/images/unnamed (7).webp')"></div>
       <div class="card-body">
+        <span class="style-chip">Cinematic Tribute</span>
         <h3>L'RAY Treat</h3>
-        <div class="meta">Baker's Café · Satyajit Ray Tribute · 4.7 ★</div>
-        <a href="./lray/">View Demo →</a>
+        <div class="meta">Baker's Café · Satyajit Ray Theme · 4.7 ★</div>
+        <a href="./lray/" class="view">View Demo →</a>
       </div>
     </div>
+
     <div class="card">
       <div class="img" style="background-image:url('./coffeehouse/images/unnamed (8).webp')"></div>
       <div class="card-body">
+        <span class="style-chip">Modern Restaurant</span>
         <h3>Coffee House, New Town</h3>
-        <div class="meta">Multi-Cuisine Restaurant · Rooftop · 4.0 ★</div>
-        <a href="./coffeehouse/">View Demo →</a>
+        <div class="meta">Multi-Cuisine · Rooftop · 4.0 ★</div>
+        <a href="./coffeehouse/" class="view">View Demo →</a>
       </div>
     </div>
+
+    <div class="card">
+      <div class="img" style="background-image:url('./baithak/images/unnamed.webp')"></div>
+      <div class="card-body">
+        <span class="style-chip">Street Poster Pop</span>
+        <h3>Baithak</h3>
+        <div class="meta">Chai aur Charcha · Drive-In · 4.8 ★</div>
+        <a href="./baithak/" class="view">View Demo →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img" style="background-image:url('./meraki/images/unnamed (3).webp')"></div>
+      <div class="card-body">
+        <span class="style-chip">Scandi Minimal</span>
+        <h3>Meraki Coffee</h3>
+        <div class="meta">Specialty Coffee · Bakery · 4.5 ★</div>
+        <a href="./meraki/" class="view">View Demo →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="img" style="background-image:url('./nuevatown/images/unnamed (17).webp')"></div>
+      <div class="card-body">
+        <span class="style-chip">Travel / Boarding Pass</span>
+        <h3>Nuevatown</h3>
+        <div class="meta">Cafe &amp; Lounge · Multi-Cuisine · 4.4 ★</div>
+        <a href="./nuevatown/" class="view">View Demo →</a>
+      </div>
+    </div>
+
   </div>
   <footer>Demo sites · Built for outreach</footer>
 </div>

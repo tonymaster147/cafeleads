@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nuevatown · Cafe &amp; Lounge — A culinary trip across the world</title>
+<meta name="description" content="Nuevatown — Cafe &amp; Lounge in New Town, Kolkata. Egg bar platter, Pasta La Vista, pizzas, burgers, shakes &amp; mocktails. A culinary trip without leaving the city." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#142a4c;--navy-dark:#0a1a33;--cream:#f7f1e3;--paper:#fffaf0;--amber:#f4a93d;--amber-dark:#c8801c;--ink:#1a1a1a;--muted:#5d5b54;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+h1,h2,h3{font-family:'Abril Fatface',serif;font-weight:400;letter-spacing:-.5px;line-height:1.05}
+a{color:inherit;text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.container{max-width:1220px;margin:0 auto;padding:0 28px}
+
+/* Decorative dashed lines (passport stamps theme) */
+.dashed{border-top:2px dashed currentColor;opacity:.4}
+
+/* Nav - airline ticket header */
+header{background:var(--navy);color:var(--cream);position:sticky;top:0;z-index:50;border-bottom:3px solid var(--amber)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{display:flex;align-items:center;gap:14px}
+.logo .icon{width:38px;height:38px;border-radius:50%;border:2px solid var(--amber);display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:20px;transform:rotate(-15deg)}
+.logo .text{display:flex;flex-direction:column;line-height:1.1}
+.logo .brand{font-family:'Abril Fatface',serif;font-size:24px;color:#fff;letter-spacing:1px}
+.logo .sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--amber)}
+.nav-links{display:flex;gap:30px}
+.nav-links a{font-size:13px;color:var(--cream);transition:color .2s;font-weight:500}
+.nav-links a:hover{color:var(--amber)}
+.cta{background:var(--amber);color:var(--navy-dark)!important;padding:10px 20px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;border-radius:2px;font-family:'JetBrains Mono',monospace}
+.cta:hover{background:#fff}
+
+/* Hero - boarding pass */
+.hero{background:var(--navy);color:var(--cream);padding:80px 0 100px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.08) 1px,transparent 0);background-size:24px 24px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;position:relative}
+.hero-left .ticket-label{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:28px;padding:6px 14px;border:1px solid var(--amber);border-radius:2px}
+.hero-left .ticket-label::before{content:"✈";font-size:14px}
+.hero-left h1{font-size:clamp(48px,8vw,96px);color:#fff;margin-bottom:24px}
+.hero-left h1 em{color:var(--amber);font-style:normal}
+.hero-left p{font-size:18px;color:#c5cbd6;max-width:520px;margin-bottom:36px;font-weight:300}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;background:var(--amber);color:var(--navy-dark);padding:14px 28px;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;border-radius:2px;font-family:'JetBrains Mono',monospace;transition:transform .2s,background .2s;border:2px solid var(--amber)}
+.btn:hover{background:#fff;border-color:#fff;transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--cream);border-color:var(--cream)}
+.btn-outline:hover{background:var(--cream);color:var(--navy-dark);border-color:var(--cream)}
+
+/* Boarding pass card */
+.boarding{background:var(--paper);color:var(--ink);border-radius:6px;padding:28px;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.3);transform:rotate(2deg)}
+.boarding::after{content:"";position:absolute;top:0;bottom:0;left:65%;border-left:2px dashed rgba(0,0,0,.25)}
+.boarding .top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:18px;border-bottom:1px solid rgba(0,0,0,.1);margin-bottom:18px}
+.boarding .brand{font-family:'Abril Fatface',serif;font-size:18px;color:var(--navy)}
+.boarding .top .mono{color:var(--muted)}
+.boarding .route{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.boarding .city{font-family:'Abril Fatface',serif;font-size:34px;color:var(--navy)}
+.boarding .city span{display:block;font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:2px;margin-top:4px;font-weight:400}
+.boarding .arrow{color:var(--amber);font-size:24px}
+.boarding .grid-info{display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:13px}
+.boarding .grid-info .k{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px;display:block}
+.boarding .grid-info .v{font-weight:600;color:var(--navy)}
+
+/* Sections */
+section{padding:110px 0;position:relative}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--amber-dark);margin-bottom:18px;display:inline-block;padding:6px 14px;background:rgba(244,169,61,.12);border-radius:2px}
+.section-head{text-align:center;margin-bottom:70px;max-width:680px;margin-left:auto;margin-right:auto}
+.section-head h2{font-size:clamp(38px,5.5vw,64px);color:var(--navy);margin-bottom:16px}
+.section-head h2 em{color:var(--amber-dark);font-style:normal}
+.section-head p{color:var(--muted);font-size:17px}
+
+/* Story */
+.story-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:center}
+.story-img{position:relative}
+.story-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;border:6px solid var(--paper);box-shadow:0 30px 50px rgba(0,0,0,.15)}
+.story-img::before{content:"NTC";position:absolute;top:-20px;left:-20px;width:80px;height:80px;background:var(--amber);color:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Abril Fatface',serif;font-size:24px;border:3px dashed var(--navy);transform:rotate(-15deg);z-index:2}
+.story-text h2{font-size:clamp(34px,5vw,52px);color:var(--navy);margin-bottom:20px}
+.story-text p{color:var(--muted);margin-bottom:16px;font-size:16.5px}
+.story-text h2 em{color:var(--amber-dark);font-style:normal}
+.passport-stamps{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.stamp{padding:8px 14px;border:2px solid var(--amber-dark);color:var(--amber-dark);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px;transform:rotate(-2deg);font-weight:600}
+.stamp:nth-child(even){transform:rotate(2deg);border-color:var(--navy);color:var(--navy)}
+
+/* Menu - destinations */
+.menu-section{background:var(--paper);position:relative}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.menu-card{background:var(--cream);border-radius:6px;overflow:hidden;border:1px solid rgba(20,42,76,.12);transition:transform .25s,box-shadow .25s;position:relative}
+.menu-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(20,42,76,.15)}
+.menu-card .img-wrap{height:220px;overflow:hidden;position:relative}
+.menu-card img{width:100%;height:100%;object-fit:cover}
+.menu-card .flag{position:absolute;top:14px;right:14px;background:var(--navy);color:var(--amber);padding:5px 10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;border-radius:2px}
+.menu-card-body{padding:22px}
+.menu-card h3{font-size:24px;color:var(--navy);margin-bottom:6px}
+.menu-card p{color:var(--muted);font-size:14px;margin-bottom:14px;line-height:1.55}
+.menu-card .footer{display:flex;justify-content:space-between;align-items:baseline;padding-top:12px;border-top:1px dashed rgba(20,42,76,.2)}
+.menu-card .price{font-family:'Abril Fatface',serif;color:var(--amber-dark);font-size:22px}
+.menu-card .from{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+
+/* Lounge feature */
+.lounge{background:var(--navy);color:var(--cream);padding:110px 0;position:relative;overflow:hidden}
+.lounge::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.06) 1px,transparent 0);background-size:24px 24px;pointer-events:none}
+.lounge-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.lounge img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:4px}
+.lounge .eyebrow{background:rgba(244,169,61,.15);color:var(--amber)}
+.lounge h2{font-size:clamp(34px,5vw,54px);color:#fff;margin-bottom:20px}
+.lounge h2 em{color:var(--amber);font-style:normal}
+.lounge p{color:#c5cbd6;font-size:17px;margin-bottom:18px}
+
+/* Gallery - polaroid grid */
+.gallery-section{background:var(--cream)}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
+.polaroid{background:#fff;padding:14px 14px 50px;border-radius:2px;box-shadow:0 14px 30px rgba(0,0,0,.1);transition:transform .25s;position:relative}
+.polaroid:nth-child(odd){transform:rotate(-1.5deg)}
+.polaroid:nth-child(even){transform:rotate(1.5deg)}
+.polaroid:hover{transform:rotate(0) scale(1.03);z-index:2}
+.polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.polaroid .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* Visit - departure board */
+.visit{background:var(--navy-dark);color:var(--cream);padding:110px 0}
+.visit .section-head h2{color:#fff}
+.visit .section-head h2 em{color:var(--amber)}
+.visit .section-head p{color:#a5acba}
+.visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.visit-card{background:var(--navy);padding:30px 24px;border-radius:4px;border:1px solid rgba(244,169,61,.2);text-align:center}
+.visit-card .icon{font-size:28px;color:var(--amber);margin-bottom:14px}
+.visit-card h3{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:500}
+.visit-card p,.visit-card a{font-family:'Abril Fatface',serif;font-size:22px;color:#fff;font-weight:400}
+.visit-card a:hover{color:var(--amber)}
+
+footer{background:#04101f;color:#6a7686;padding:30px 0;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+
+@media(max-width:900px){
+.nav-links{display:none}
+.hero-grid,.story-grid,.lounge-grid{grid-template-columns:1fr;gap:48px}
+section,.hero{padding:70px 0}
+.boarding{transform:rotate(0)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <div class="icon">N</div>
+        <div class="text">
+          <span class="brand">Nuevatown</span>
+          <span class="sub">Cafe · Lounge</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#story">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#lounge">Lounge</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <a href="tel:+917044767871" class="cta">Reserve →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <span class="ticket-label">Flight 044 · Now Boarding</span>
+      <h1>Eat the world<br>without leaving<br><em>New Town.</em></h1>
+      <p>A cafe &amp; lounge serving a passport-full of flavours — Italian pastas, all-day egg platters, wood-fired pizzas, Asian noodles, classic burgers and creamy sundaes.</p>
+      <div class="btn-row">
+        <a href="#menu" class="btn">View Menu</a>
+        <a href="#visit" class="btn btn-outline">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="boarding">
+        <div class="top">
+          <span class="brand">NUEVATOWN ✈</span>
+          <span class="mono">N°044</span>
+        </div>
+        <div class="route">
+          <div class="city">KOL<span>Kolkata</span></div>
+          <div class="arrow">━━ ✈ ━━</div>
+          <div class="city">YUM<span>Yum-land</span></div>
+        </div>
+        <div class="grid-info">
+          <div><span class="k">Gate</span><span class="v">Cafe &amp; Lounge</span></div>
+          <div><span class="k">Seat</span><span class="v">Yours</span></div>
+          <div><span class="k">Boarding</span><span class="v">11:00 AM Daily</span></div>
+          <div><span class="k">Rating</span><span class="v">4.4 ★ (182)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="./images/unnamed (17).webp" alt="Inside Nuevatown lounge">
+      </div>
+      <div class="story-text">
+        <span class="eyebrow">Our Story</span>
+        <h2>One menu. <em>Many destinations.</em></h2>
+        <p>Nuevatown is a cafe &amp; lounge in New Town built around a simple idea — a single menu that takes you around the world. Italian today, Asian tomorrow, classic continental for breakfast, sundaes after dinner.</p>
+        <p>Bright, comfortable seating. Friendly service. And portions made to share. Pull up a chair, order one of everything, stay a while.</p>
+        <div class="passport-stamps">
+          <span class="stamp">★ 4.4 Rated</span>
+          <span class="stamp">Cafe + Lounge</span>
+          <span class="stamp">Family Friendly</span>
+          <span class="stamp">Party Bookings</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu" class="menu-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">★ The Menu ★</span>
+      <h2>A culinary <em>around-the-world.</em></h2>
+      <p>Stamp your appetite at every destination — from Egg Bar to Pasta La Vista.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (7).webp" alt="Egg Bar Platter"><span class="flag">🇬🇧 ENG</span></div>
+        <div class="menu-card-body">
+          <h3>Egg Bar Platter</h3>
+          <p>Sunny-side up, garlic bread, sausages, potato wedges &amp; tomato salsa.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹220</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (5).webp" alt="Pasta La Vista"><span class="flag">🇮🇹 ITA</span></div>
+        <div class="menu-card-body">
+          <h3>Pasta La Vista</h3>
+          <p>Penne Alfredo, spaghetti aglio olio, pesto, arrabiata, mac &amp; cheese.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹300</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (13).webp" alt="Burger & Mocktail"><span class="flag">🇺🇸 USA</span></div>
+        <div class="menu-card-body">
+          <h3>Burgers &amp; Sandwiches</h3>
+          <p>Stacked burgers, grilled sandwiches with fries &amp; signature mocktails.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹180</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (1).webp" alt="Pizza"><span class="flag">🇮🇹 ITA</span></div>
+        <div class="menu-card-body">
+          <h3>Wood-Fired Pizzas</h3>
+          <p>Hand-tossed dough, vibrant toppings, bubbling mozzarella — slice it up.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹240</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (3).webp" alt="Nachos"><span class="flag">🇲🇽 MEX</span></div>
+        <div class="menu-card-body">
+          <h3>Cheesy Nachos</h3>
+          <p>Crisp nachos, generous cheese, olives — a classic shareable starter.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹195</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (15).webp" alt="Sandwiches"><span class="flag">🇫🇷 FR</span></div>
+        <div class="menu-card-body">
+          <h3>Grilled Sandwiches</h3>
+          <p>Toasted bread, generous fillings, golden fries on the side.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹150</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (11).webp" alt="Cold Coffee"><span class="flag">🌎 GLBL</span></div>
+        <div class="menu-card-body">
+          <h3>Cold Coffees &amp; Shakes</h3>
+          <p>Thick cold coffees with chocolate drizzle, shakes &amp; milkshakes.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹120</span></div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <div class="img-wrap"><img src="./images/unnamed (19).webp" alt="Cappuccino"><span class="flag">🇮🇹 ITA</span></div>
+        <div class="menu-card-body">
+          <h3>Hot Coffees &amp; Teas</h3>
+          <p>Cappuccino, espresso, masala chai, herbal teas — the warm corner.</p>
+          <div class="footer"><span class="from">Starts at</span><span class="price">₹80</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lounge" class="lounge">
+  <div class="container">
+    <div class="lounge-grid">
+      <img src="./images/unnamed (9).webp" alt="The lounge seating">
+      <div>
+        <span class="eyebrow">The Lounge</span>
+        <h2>A comfortable corner for <em>long catch-ups.</em></h2>
+        <p>Plush seating, low lighting and a curated playlist — Nuevatown is built as much for the after-dinner adda as for the meal itself.</p>
+        <p>Perfect for date nights, friend reunions, small celebrations and slow Sunday afternoons. Reserve ahead for the lounge section.</p>
+        <a href="tel:+917044767871" class="btn" style="margin-top:14px">Reserve the Lounge →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">★ Snapshots ★</span>
+      <h2>Postcards from <em>Nuevatown.</em></h2>
+      <p>Moments from the cafe, the lounge, the kitchen.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="polaroid"><img src="./images/unnamed (17).webp" alt=""><span class="cap">— The Lounge</span></div>
+      <div class="polaroid"><img src="./images/unnamed (7).webp" alt=""><span class="cap">— Egg Platter</span></div>
+      <div class="polaroid"><img src="./images/unnamed (5).webp" alt=""><span class="cap">— Pasta</span></div>
+      <div class="polaroid"><img src="./images/unnamed (13).webp" alt=""><span class="cap">— Burger &amp; Cooler</span></div>
+      <div class="polaroid"><img src="./images/unnamed (1).webp" alt=""><span class="cap">— Pizza</span></div>
+      <div class="polaroid"><img src="./images/unnamed (11).webp" alt=""><span class="cap">— Cold Coffee</span></div>
+      <div class="polaroid"><img src="./images/unnamed (15).webp" alt=""><span class="cap">— Sandwich Board</span></div>
+      <div class="polaroid"><img src="./images/unnamed (19).webp" alt=""><span class="cap">— Cappuccino</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Departure Info</span>
+      <h2>Find your <em>gate.</em></h2>
+      <p>New Town, Kolkata — walk in or call ahead.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <div class="icon">✈</div>
+        <h3>Call</h3>
+        <p><a href="tel:+917044767871">+91 70447 67871</a></p>
+      </div>
+      <div class="visit-card">
+        <div class="icon">📍</div>
+        <h3>Gate</h3>
+        <p><a href="https://www.google.com/maps/place/Nuevatown+%7C+Cafe+%26+Lounge" target="_blank">Maps →</a></p>
+      </div>
+      <div class="visit-card">
+        <div class="icon">🕒</div>
+        <h3>Boarding</h3>
+        <p>11 AM — 11 PM</p>
+      </div>
+      <div class="visit-card">
+        <div class="icon">★</div>
+        <h3>Rated</h3>
+        <p>4.4 / 182</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© Nuevatown · Cafe &amp; Lounge · New Town, Kolkata</footer>
+
+</body>
+</html>

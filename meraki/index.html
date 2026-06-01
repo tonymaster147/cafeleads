@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meraki Coffee — A specialty coffee &amp; bakery in Kolkata</title>
+<meta name="description" content="Meraki Coffee — a specialty coffee shop and bakery in Kolkata. Hot &amp; cold brews, frappes, croissant sandwiches, Korean cheese buns and house-made desserts." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafaf7;--paper:#fff;--ink:#0f0f0f;--muted:#7a7a76;--line:#e6e4dd;--accent:#0f0f0f;--soft:#f0ede4;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:-.5px;line-height:1.1}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1280px;margin:0 auto;padding:0 32px}
+
+/* Nav */
+header{position:sticky;top:0;background:rgba(250,250,247,.92);backdrop-filter:blur(14px);z-index:50;border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{display:flex;flex-direction:column;line-height:1.1}
+.logo .brand{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;letter-spacing:1px}
+.logo .sub{font-size:10px;letter-spacing:3.5px;text-transform:uppercase;color:var(--muted);margin-top:2px;font-weight:400}
+.nav-links{display:flex;gap:40px}
+.nav-links a{font-size:13px;font-weight:400;color:var(--ink);letter-spacing:.3px;transition:opacity .2s}
+.nav-links a:hover{opacity:.55}
+.cta{font-size:13px;font-weight:400;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:2px;transition:opacity .2s}
+.cta:hover{opacity:.55}
+
+/* Hero - editorial split */
+.hero{padding:80px 0 100px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:end}
+.hero-left .num{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:24px;display:block}
+.hero-left h1{font-size:clamp(56px,8vw,108px);font-weight:500;margin-bottom:32px}
+.hero-left h1 em{font-style:italic;font-weight:400}
+.hero-left p{font-size:18px;color:var(--muted);max-width:440px;margin-bottom:36px;font-weight:300}
+.hero-meta{display:flex;gap:40px;border-top:1px solid var(--line);padding-top:24px;margin-top:36px}
+.hero-meta div{font-size:13px}
+.hero-meta .k{color:var(--muted);text-transform:uppercase;letter-spacing:2px;font-size:11px;margin-bottom:4px;display:block}
+.hero-meta .v{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500}
+.hero-right img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.hero-caption{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:14px;text-align:right}
+
+/* Generic */
+section{padding:120px 0}
+.eyebrow{font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:var(--muted);margin-bottom:20px;display:block;font-weight:400}
+.section-head{margin-bottom:80px;max-width:680px}
+.section-head h2{font-size:clamp(36px,5.5vw,64px);margin-bottom:18px}
+.section-head h2 em{font-style:italic}
+.section-head p{color:var(--muted);font-size:17px;font-weight:300}
+
+/* Story split */
+.story{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center}
+.story-img{position:relative}
+.story-img img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.story-text h2{font-size:clamp(34px,5vw,54px);margin-bottom:24px}
+.story-text p{color:var(--muted);font-size:16.5px;margin-bottom:18px;max-width:560px}
+.story-numbers{display:grid;grid-template-columns:repeat(3,auto);gap:48px;margin-top:48px;padding-top:36px;border-top:1px solid var(--line)}
+.story-numbers .n{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--ink);font-weight:500;line-height:1;display:block;margin-bottom:6px}
+.story-numbers .l{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* Menu — magazine columns */
+.menu-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px 36px}
+.dish{}
+.dish-img{aspect-ratio:1/1;overflow:hidden;margin-bottom:18px}
+.dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.dish:hover .dish-img img{transform:scale(1.04)}
+.dish .row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:10px}
+.dish h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500}
+.dish .price{font-family:'Inter',sans-serif;font-size:14px;color:var(--muted);font-weight:400;letter-spacing:.5px}
+.dish p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.6}
+
+/* Coffee menu list */
+.coffee-list-wrap{background:var(--soft);padding:120px 0}
+.coffee-list-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px}
+.coffee-col h4{font-family:'Cormorant Garamond',serif;font-size:28px;margin-bottom:24px;font-weight:500;border-bottom:1px solid var(--line);padding-bottom:14px}
+.coffee-item{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(15,15,15,.05);align-items:baseline;gap:14px}
+.coffee-item span:first-child{font-size:15px}
+.coffee-item span:last-child{font-size:13px;color:var(--muted);font-feature-settings:"tnum"}
+
+/* Gallery — asymmetric */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery-grid .g{overflow:hidden}
+.gallery-grid .g img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery-grid .g:hover img{transform:scale(1.05)}
+.g.tall{grid-row:span 2}
+.g.wide{grid-column:span 2}
+.gallery-grid .g{aspect-ratio:1/1}
+.gallery-grid .g.tall{aspect-ratio:1/2}
+.gallery-grid .g.wide{aspect-ratio:2/1}
+@media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.g.tall,.g.wide{aspect-ratio:1/1;grid-row:auto;grid-column:auto}}
+
+/* Visit */
+.visit{background:var(--ink);color:var(--bg);padding:120px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.visit h2{color:var(--bg);font-size:clamp(40px,6vw,72px);margin-bottom:24px}
+.visit p{color:#a5a5a0;font-size:17px;margin-bottom:32px;font-weight:300}
+.visit-info{display:grid;gap:24px}
+.visit-row{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.visit-row .k{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#7a7a76;padding-top:4px}
+.visit-row .v{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500}
+.visit-row .v a{border-bottom:1px solid rgba(255,255,255,.3);transition:border-color .2s}
+.visit-row .v a:hover{border-color:#fff}
+
+footer{padding:36px 0;text-align:center;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);background:var(--ink)}
+
+@media(max-width:900px){
+.nav-links{display:none}
+.hero-grid,.story-grid,.visit-grid{grid-template-columns:1fr;gap:48px}
+section,.hero{padding:70px 0}
+.story-numbers{grid-template-columns:1fr;gap:18px}
+.visit-row{grid-template-columns:1fr;gap:6px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <span class="brand">Meraki</span>
+        <span class="sub">Coffee · Kolkata</span>
+      </div>
+      <div class="nav-links">
+        <a href="#story">Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#coffee">Coffee</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <a href="tel:+919874541317" class="cta">Visit Us →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <span class="num">No. 01 — Specialty Coffee · Bakery</span>
+      <h1>Coffee, made<br>with <em>meraki.</em></h1>
+      <p>The Greek word — to do something with soul, creativity, and love. That's how every cup and every croissant leaves our counter.</p>
+      <div class="hero-meta">
+        <div><span class="k">Rating</span><span class="v">4.5 ★</span></div>
+        <div><span class="k">Hours</span><span class="v">8am — 10pm</span></div>
+        <div><span class="k">Since</span><span class="v">Kolkata</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="./images/unnamed (3).webp" alt="Inside Meraki Coffee">
+      <p class="hero-caption">— Our quiet corner</p>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="./images/unnamed.webp" alt="Window seat at Meraki">
+      </div>
+      <div class="story-text">
+        <span class="eyebrow">Our Story</span>
+        <h2>A small room, a good cup, an afternoon well spent.</h2>
+        <p>Meraki is a neighbourhood specialty coffee shop. White walls, cane chairs, round wooden tables, and a bakery counter that fills the room with the smell of fresh croissants.</p>
+        <p>We pour Vietnamese iced coffee, Spanish lattes and a serious flat white. We bake Korean cheese buns, cinnamon rolls and warm chocolate chunk cookies. And we keep things quiet enough that you can hear yourself think.</p>
+        <div class="story-numbers">
+          <div><span class="n">4.5</span><span class="l">Google Rating</span></div>
+          <div><span class="n">20+</span><span class="l">Coffees on the Menu</span></div>
+          <div><span class="n">Daily</span><span class="l">Fresh Bakes</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Bites &amp; Delights</span>
+      <h2>From our <em>kitchen,</em><br>to your table.</h2>
+      <p>Fresh-baked, made-to-order, served on porcelain. A short menu, done well.</p>
+    </div>
+    <div class="menu-wrap">
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (12).webp" alt="Butter Croissant"></div>
+        <div class="row"><h3>Butter Croissant</h3><span class="price">₹110</span></div>
+        <p>Flaky, buttery — laminated dough baked fresh each morning.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (10).webp" alt="Cinnamon Roll"></div>
+        <div class="row"><h3>Cinnamon Roll</h3><span class="price">₹99</span></div>
+        <p>Warm, soft roll with cinnamon and a sweet glaze.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (8).webp" alt="Cinnamon Frappe"></div>
+        <div class="row"><h3>Biscoff Cold Frappe</h3><span class="price">₹159</span></div>
+        <p>Espresso, vanilla ice cream &amp; Biscoff — topped with whipped cream.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (16).webp" alt="Blueberry Cheesecake"></div>
+        <div class="row"><h3>Blueberry Cheesecake</h3><span class="price">₹185</span></div>
+        <p>Slow-set cream cheese on a biscuit base with house blueberry compote.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (14).webp" alt="Chicken Cheese Nachos"></div>
+        <div class="row"><h3>Chicken Cheese Nachos</h3><span class="price">₹225</span></div>
+        <p>Crisp nachos, spiced chicken keema, melted cheese, paprika, olives.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (18).webp" alt="Mac and Cheese"></div>
+        <div class="row"><h3>Baked Mac &amp; Cheese</h3><span class="price">₹195</span></div>
+        <p>Bubbling baked pasta with toasted garlic bread on the side.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (2).webp" alt="Counter"></div>
+        <div class="row"><h3>Korean Cheese Bun</h3><span class="price">₹145</span></div>
+        <p>Soft bun stuffed with garlic, cheese and a runny egg filling.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (20).webp" alt="Latte Art"></div>
+        <div class="row"><h3>Cappuccino</h3><span class="price">₹99</span></div>
+        <p>Rich espresso, steamed milk, a thick layer of foam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coffee" class="coffee-list-wrap">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Brews &amp; Blends</span>
+      <h2>The <em>coffee</em> bar.</h2>
+      <p>Twenty ways to take your coffee — pulled, poured, frothed, frapped.</p>
+    </div>
+    <div class="coffee-list-grid">
+      <div class="coffee-col">
+        <h4>Hot Coffee</h4>
+        <div class="coffee-item"><span>Espresso</span><span>₹75</span></div>
+        <div class="coffee-item"><span>Cappuccino</span><span>₹99</span></div>
+        <div class="coffee-item"><span>Flat White</span><span>₹99</span></div>
+        <div class="coffee-item"><span>Latte</span><span>₹125</span></div>
+        <div class="coffee-item"><span>Biscoff Latte</span><span>₹145</span></div>
+        <div class="coffee-item"><span>Spanish Latte</span><span>₹145</span></div>
+        <div class="coffee-item"><span>Mocha</span><span>₹145</span></div>
+        <div class="coffee-item"><span>Hot Chocolate</span><span>₹135</span></div>
+      </div>
+      <div class="coffee-col">
+        <h4>Cold &amp; Specialty</h4>
+        <div class="coffee-item"><span>Classic Cold Coffee</span><span>₹135</span></div>
+        <div class="coffee-item"><span>Iced Americano</span><span>₹115</span></div>
+        <div class="coffee-item"><span>Iced Cappuccino</span><span>₹135</span></div>
+        <div class="coffee-item"><span>Caramel Macchiato</span><span>₹149</span></div>
+        <div class="coffee-item"><span>Vietnamese Iced Coffee</span><span>₹149</span></div>
+        <div class="coffee-item"><span>Coconut Milk Iced Latte</span><span>₹159</span></div>
+        <div class="coffee-item"><span>Espresso Tonic</span><span>₹159</span></div>
+        <div class="coffee-item"><span>Iced Chocolate</span><span>₹145</span></div>
+      </div>
+      <div class="coffee-col">
+        <h4>Frappes &amp; Coolers</h4>
+        <div class="coffee-item"><span>Caramel Frappe</span><span>₹159</span></div>
+        <div class="coffee-item"><span>Mocha Frappe</span><span>₹159</span></div>
+        <div class="coffee-item"><span>White Chocolate Frappe</span><span>₹159</span></div>
+        <div class="coffee-item"><span>Biscoff Frappe</span><span>₹159</span></div>
+        <div class="coffee-item"><span>Spanish Frappe</span><span>₹159</span></div>
+        <div class="coffee-item"><span>Oreo Frappe</span><span>₹159</span></div>
+        <div class="coffee-item"><span>Virgin Mojito</span><span>₹139</span></div>
+        <div class="coffee-item"><span>Strawberry Milkshake</span><span>₹139</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Inside Meraki</span>
+      <h2>The <em>room.</em></h2>
+      <p>Quiet, warm, easy to spend an afternoon in.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g tall"><img src="./images/unnamed (2).webp" alt=""></div>
+      <div class="g wide"><img src="./images/unnamed (3).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (12).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (10).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (16).webp" alt=""></div>
+      <div class="g wide"><img src="./images/unnamed.webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (8).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (14).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (20).webp" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="container">
+    <div class="visit-grid">
+      <div>
+        <span class="eyebrow" style="color:#a5a5a0">Find Us</span>
+        <h2>Visit.</h2>
+        <p>Walk in for a quiet cup. We'd love to have you over.</p>
+      </div>
+      <div class="visit-info">
+        <div class="visit-row">
+          <span class="k">Call</span>
+          <span class="v"><a href="tel:+919874541317">+91 98745 41317</a></span>
+        </div>
+        <div class="visit-row">
+          <span class="k">Location</span>
+          <span class="v"><a href="https://www.google.com/maps/place/Meraki+Coffee+Kolkata" target="_blank">Google Maps →</a></span>
+        </div>
+        <div class="visit-row">
+          <span class="k">Hours</span>
+          <span class="v">Daily, 8am — 10pm</span>
+        </div>
+        <div class="visit-row">
+          <span class="k">Rating</span>
+          <span class="v">4.5 ★ · 55 reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© Meraki Coffee · Kolkata</footer>
+
+</body>
+</html>
