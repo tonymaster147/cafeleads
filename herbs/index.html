@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Herbs Cafe — A lakeside cafe by the water · Kolkata</title>
+<meta name="description" content="Herbs Cafe — a lakeside cafe in Kolkata. Sunken seating, bamboo decks over water, Bengali thalis, Italian plates, coffee &amp; cocktails under the open sky." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ec;--paper:#fbfaf5;--ink:#1d251f;--muted:#5c6b5f;--leaf:#3e5d3a;--leaf-dark:#27401f;--accent:#a87c4f;--line:#dcd9cf;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:-.5px;line-height:1.05}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.container{max-width:1320px;margin:0 auto;padding:0 36px}
+@media(max-width:700px){.container{padding:0 20px}}
+
+/* Nav */
+header{position:sticky;top:0;background:rgba(246,243,236,.92);backdrop-filter:blur(16px);z-index:50;border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{display:flex;align-items:center;gap:10px;line-height:1}
+.logo .mark{width:38px;height:38px;border-radius:50%;background:var(--leaf);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;font-weight:600}
+.logo .text{display:flex;flex-direction:column}
+.logo .brand{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--leaf-dark);letter-spacing:.5px}
+.logo .sub{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.nav-links{display:flex;gap:36px}
+.nav-links a{font-size:13px;font-weight:400;color:var(--ink);letter-spacing:.5px;transition:color .2s,opacity .2s}
+.nav-links a:hover{color:var(--leaf);opacity:.8}
+.cta{font-size:13px;font-weight:500;color:var(--leaf-dark);border:1px solid var(--leaf-dark);padding:10px 22px;border-radius:30px;letter-spacing:.5px;transition:all .2s}
+.cta:hover{background:var(--leaf-dark);color:var(--paper)}
+
+/* Hero - editorial split */
+.hero{padding:60px 0 100px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+.hero-left .badge{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:var(--leaf);margin-bottom:32px;font-weight:500}
+.hero-left .badge::before,.hero-left .badge::after{content:"";width:30px;height:1px;background:var(--leaf)}
+.hero-left h1{font-size:clamp(52px,8vw,108px);font-weight:500;margin-bottom:34px;color:var(--ink)}
+.hero-left h1 em{font-style:italic;color:var(--leaf);font-weight:400}
+.hero-left p{font-size:18px;color:var(--muted);max-width:480px;margin-bottom:42px;font-weight:300}
+.hero-meta{display:grid;grid-template-columns:repeat(3,auto);gap:50px;border-top:1px solid var(--line);padding-top:28px}
+.hero-meta div{font-size:13px}
+.hero-meta .k{color:var(--muted);text-transform:uppercase;letter-spacing:2.5px;font-size:10px;margin-bottom:6px;display:block;font-weight:500}
+.hero-meta .v{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--leaf-dark)}
+.hero-right{position:relative;height:680px}
+.hero-right .img-a{position:absolute;top:0;right:0;width:78%;height:78%;overflow:hidden;border-radius:4px;box-shadow:0 30px 60px rgba(39,64,31,.25)}
+.hero-right .img-b{position:absolute;bottom:0;left:0;width:48%;height:42%;overflow:hidden;border-radius:4px;border:8px solid var(--bg);box-shadow:0 20px 40px rgba(39,64,31,.2)}
+.hero-right img{width:100%;height:100%;object-fit:cover}
+.hero-leaf{position:absolute;bottom:-30px;right:8%;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--leaf);letter-spacing:1px;writing-mode:vertical-rl;transform:rotate(180deg)}
+
+/* Sections */
+section{padding:120px 0;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:3.5px;text-transform:uppercase;color:var(--leaf);margin-bottom:20px;font-weight:500}
+.eyebrow::before{content:"❋";font-size:14px}
+.section-head{margin-bottom:80px;max-width:720px}
+.section-head h2{font-size:clamp(40px,6vw,72px);margin-bottom:20px;color:var(--ink)}
+.section-head h2 em{font-style:italic;color:var(--leaf)}
+.section-head p{color:var(--muted);font-size:17px;font-weight:300}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+/* Story */
+.story{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.story-img{position:relative}
+.story-img img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
+.story-img::after{content:"Sunset · Lakeside · 4.5 ★";position:absolute;bottom:24px;left:24px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:2px;text-transform:uppercase;background:var(--paper);padding:10px 18px;border-radius:30px}
+.story-text h2{font-size:clamp(36px,5vw,58px);margin-bottom:28px}
+.story-text h2 em{font-style:italic;color:var(--leaf)}
+.story-text p{color:var(--muted);font-size:16.5px;margin-bottom:18px;max-width:540px}
+.story-text .signature{margin-top:36px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--leaf-dark);padding-left:24px;border-left:2px solid var(--leaf);max-width:460px}
+
+/* Experience strip */
+.experience{padding:90px 0;background:var(--leaf-dark);color:var(--paper);text-align:center}
+.experience .quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(24px,3.5vw,42px);line-height:1.4;max-width:880px;margin:0 auto;font-weight:500;color:#e8e0cb}
+.experience .author{display:block;margin-top:28px;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#b9b09a;font-style:normal;font-weight:500}
+
+/* Menu - magazine list */
+.menu-section{background:var(--bg)}
+.menu-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:60px;flex-wrap:wrap}
+.menu-tabs .tab{padding:10px 22px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:30px;background:transparent;font-weight:500}
+.menu-tabs .tab.on{background:var(--leaf-dark);color:var(--paper);border-color:var(--leaf-dark)}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:48px 36px}
+.dish{}
+.dish-img{aspect-ratio:4/5;overflow:hidden;margin-bottom:22px;border-radius:4px;position:relative}
+.dish-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.dish:hover .dish-img img{transform:scale(1.04)}
+.dish .row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dotted var(--line);padding-bottom:10px;margin-bottom:10px}
+.dish h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500}
+.dish .price{font-family:'Inter',sans-serif;font-size:13px;color:var(--leaf);font-weight:500;letter-spacing:1px}
+.dish p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.6}
+
+/* Spaces section */
+.spaces{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spaces-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.space{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:4/5}
+.space img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.space:hover img{transform:scale(1.04)}
+.space .caption{position:absolute;left:0;right:0;bottom:0;padding:32px 28px;background:linear-gradient(0deg,rgba(29,37,31,.85),transparent);color:var(--paper)}
+.space .caption .k{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#c8d4c4;display:block;margin-bottom:8px;font-weight:500}
+.space .caption h3{font-size:30px;color:var(--paper)}
+.space .caption h3 em{font-style:italic}
+@media(max-width:768px){.spaces-grid{grid-template-columns:1fr}}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;grid-auto-rows:200px}
+.gallery-grid .g{overflow:hidden;border-radius:4px}
+.gallery-grid .g img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery-grid .g:hover img{transform:scale(1.04)}
+.g.tall{grid-row:span 2}
+.g.wide{grid-column:span 2}
+.g.big{grid-column:span 2;grid-row:span 2}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}.g.big{grid-column:span 2}.g.tall,.g.wide{grid-row:auto;grid-column:auto}}
+
+/* Visit */
+.visit{background:var(--leaf-dark);color:var(--paper);padding:120px 0}
+.visit .eyebrow{color:#c8d4c4}
+.visit .eyebrow::before{color:#c8d4c4}
+.visit h2{color:var(--paper);font-size:clamp(40px,6vw,72px);margin-bottom:24px}
+.visit h2 em{font-style:italic;color:#d9c39d}
+.visit-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:90px;align-items:start}
+.visit p{color:#b9b09a;font-size:17px;margin-bottom:30px;font-weight:300;max-width:480px}
+.visit-info{display:grid;gap:0}
+.visit-row{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.visit-row .k{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#9ca895;padding-top:6px;font-weight:500}
+.visit-row .v{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--paper)}
+.visit-row .v a{transition:opacity .2s}
+.visit-row .v a:hover{opacity:.75}
+
+footer{padding:32px 0;text-align:center;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#9ca895;background:#1a2218}
+footer em{font-style:italic;text-transform:none;letter-spacing:.5px;color:#c8d4c4}
+
+@media(max-width:900px){
+.nav-links{display:none}
+.hero-grid,.story-grid,.visit-grid{grid-template-columns:1fr;gap:50px}
+.hero-right{height:480px}
+section,.hero{padding:70px 0}
+.hero-meta{grid-template-columns:1fr;gap:18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <div class="mark">h</div>
+        <div class="text">
+          <span class="brand">Herbs Cafe</span>
+          <span class="sub">By the Lakeside</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#story">Our Story</a>
+        <a href="#menu">Menu</a>
+        <a href="#spaces">The Space</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <a href="tel:+918910801717" class="cta">Reserve →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <span class="badge">Established by the water</span>
+      <h1>A cafe<br>by the <em>lake.</em></h1>
+      <p>Where sunken seats sit beside still water, bamboo decks stretch over the surface, and every meal arrives with a view worth lingering for.</p>
+      <div class="hero-meta">
+        <div><span class="k">Rating</span><span class="v">4.5 ★</span></div>
+        <div><span class="k">Reviews</span><span class="v">1,100+</span></div>
+        <div><span class="k">Setting</span><span class="v">Lakeside</span></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="img-a"><img src="./images/unnamed.webp" alt="Herbs Cafe lakeside deck at dusk"></div>
+      <div class="img-b"><img src="./images/unnamed (2).webp" alt="Inside Herbs"></div>
+      <div class="hero-leaf">— A small wild corner of Kolkata</div>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-img">
+        <img src="./images/unnamed (6).webp" alt="Bamboo deck over the lake at Herbs">
+      </div>
+      <div class="story-text">
+        <span class="eyebrow">Our Story</span>
+        <h2>The cafe with its feet <em>in the water.</em></h2>
+        <p>Herbs Cafe was built around one thing: the lake. The dining room sits inside a high-ceilinged greenhouse with sunken concrete seats around still water pools. The bamboo deck reaches out over the lake itself — string lights, rainbow umbrellas, and dinner with herons for neighbours.</p>
+        <p>Our menu wanders too. Bengali thalis on banana leaves at lunch. Wood-fired pizzas and creamy pastas at dinner. Hand-pulled lattes any time. Stay through sundown — that's when it gets magical.</p>
+        <div class="signature">— The kind of place you remember the smell of, weeks later.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="experience">
+  <div class="container">
+    <p class="quote">"Sit by the water, listen to the breeze, eat slowly. There is nowhere else you need to be."</p>
+    <span class="author">— What we tell every guest at the door</span>
+  </div>
+</section>
+
+<section id="menu" class="menu-section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">From the Kitchen</span>
+      <h2>A <em>seasonal</em> menu, served all day.</h2>
+      <p>Bengali classics, Italian comfort, fresh-pulled coffee — small plates &amp; full meals from morning until late.</p>
+    </div>
+    <div class="menu-tabs">
+      <span class="tab on">All</span>
+      <span class="tab">Coffee</span>
+      <span class="tab">Bengali Thalis</span>
+      <span class="tab">Pizzas &amp; Pasta</span>
+      <span class="tab">Desserts</span>
+    </div>
+    <div class="menu-grid">
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (19).webp" alt="Bengali Thali"></div>
+        <div class="row"><h3>Bengali Thali</h3><span class="price">₹450</span></div>
+        <p>Banana leaf, fragrant pulao, fish curry, dal, traditional pickles &amp; sweet at the end.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (16).webp" alt="Creamy Penne"></div>
+        <div class="row"><h3>Creamy Spinach Penne</h3><span class="price">₹340</span></div>
+        <p>Penne tossed in cream sauce with fresh spinach &amp; parmesan — served with garlic bread.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (10).webp" alt="Wood-Fired Pizza"></div>
+        <div class="row"><h3>Wood-Fired Pizza</h3><span class="price">₹360</span></div>
+        <p>Hand-tossed thin crust, fresh mozzarella, olives, jalapeño &amp; peppers.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (8).webp" alt="Lakeside Latte"></div>
+        <div class="row"><h3>Lakeside Latte</h3><span class="price">₹180</span></div>
+        <p>House blend espresso &amp; steamed milk — best taken with the view.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (18).webp" alt="Sunset Spritz"></div>
+        <div class="row"><h3>Sunset Spritz</h3><span class="price">₹260</span></div>
+        <p>A light citrus cooler — perfect for golden-hour by the deck.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (17).webp" alt="Crispy Fingers"></div>
+        <div class="row"><h3>Crispy Bites</h3><span class="price">₹240</span></div>
+        <p>Hand-breaded golden fingers with house tartare — easy to share.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (7).webp" alt="Caramel Pudding"></div>
+        <div class="row"><h3>Caramel Custard</h3><span class="price">₹160</span></div>
+        <p>Silken caramel custard plated with painted-sauce art — a guest classic.</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img"><img src="./images/unnamed (9).webp" alt="Brownie Sundae"></div>
+        <div class="row"><h3>Brownie Sundae</h3><span class="price">₹220</span></div>
+        <p>Warm brownie, vanilla ice cream, hot chocolate sauce — the right way to end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="spaces" class="spaces">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Space</span>
+      <h2>Three ways to <em>sit a while.</em></h2>
+      <p>The greenhouse dining room, the bamboo deck over the water, the lakeside terrace at dusk.</p>
+    </div>
+    <div class="spaces-grid">
+      <div class="space">
+        <img src="./images/unnamed (2).webp" alt="Greenhouse dining">
+        <div class="caption">
+          <span class="k">Indoor</span>
+          <h3>The <em>Greenhouse</em></h3>
+        </div>
+      </div>
+      <div class="space">
+        <img src="./images/unnamed (6).webp" alt="Bamboo deck over water">
+        <div class="caption">
+          <span class="k">Outdoor</span>
+          <h3>The <em>Deck</em></h3>
+        </div>
+      </div>
+      <div class="space">
+        <img src="./images/unnamed.webp" alt="Lakeside terrace at dusk">
+        <div class="caption">
+          <span class="k">Sundown</span>
+          <h3>The <em>Lakeside</em></h3>
+        </div>
+      </div>
+      <div class="space">
+        <img src="./images/unnamed (4).webp" alt="Sunken seats">
+        <div class="caption">
+          <span class="k">Signature</span>
+          <h3>The <em>Sunken Seats</em></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">Gallery</span>
+      <h2>A walk <em>through</em> Herbs.</h2>
+      <p>Bamboo, banana leaves, late-evening light, and a lake that catches it all.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="g big"><img src="./images/unnamed.webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (2).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (4).webp" alt=""></div>
+      <div class="g tall"><img src="./images/unnamed (6).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (8).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (3).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (5).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (16).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (10).webp" alt=""></div>
+      <div class="g wide"><img src="./images/unnamed (19).webp" alt=""></div>
+      <div class="g"><img src="./images/unnamed (18).webp" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="container">
+    <div class="visit-grid">
+      <div>
+        <span class="eyebrow">Visit Us</span>
+        <h2>Find your seat <em>by the water.</em></h2>
+        <p>We're easy to find and worth the small drive out. Walk in or reserve ahead for sundown.</p>
+      </div>
+      <div class="visit-info">
+        <div class="visit-row">
+          <span class="k">Call</span>
+          <span class="v"><a href="tel:+918910801717">+91 89108 01717</a></span>
+        </div>
+        <div class="visit-row">
+          <span class="k">Location</span>
+          <span class="v"><a href="https://www.google.com/maps/place/Herbs+Cafe%E2%80%99" target="_blank">Google Maps →</a></span>
+        </div>
+        <div class="visit-row">
+          <span class="k">Hours</span>
+          <span class="v">11 AM — 11 PM, Daily</span>
+        </div>
+        <div class="visit-row">
+          <span class="k">Best for</span>
+          <span class="v">Sundown · Long lunches</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© Herbs Cafe · <em>By the lakeside, by the open sky.</em></footer>
+
+</body>
+</html>
